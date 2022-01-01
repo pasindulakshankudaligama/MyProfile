@@ -29,3 +29,10 @@ Pasindu Lakshan Kudaligama Readme Profile Styles here ! ✌
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer"/>
 </p>
+
+## :link: **Links**
+- Website : [PasinduLakshanKudaigama](https://pasindulakshankudaligama.000webhostapp.com/)
+- GitHub-Pages : [PasinduLakshanKudaligama.github.io](https://github.com/pasindulakshankudaligama)
+- Site Map : [Click Here](https://www.gloomaps.com/zkW7hEsEkx)
+- Wireframe : [Click Here](https://wireframe.cc/0EsPjQ)
+- Mockup : [Click Here](https://www.figma.com/file/ODNGUckoFcQyn5RFkvqQfQ/My-Web?node-id=0%3A1)
