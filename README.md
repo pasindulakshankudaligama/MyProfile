@@ -14,9 +14,11 @@ Format: ![Alt Text]("https://www.facebook.com/photo.php?fbid=1316465092140856&se
 ![PasinduLakshankudaligama](assets/images/2img.jpg)
 Format: ![Alt Text]("https://www.facebook.com/photo.php?fbid=1316465092140856&set=pb.100013321332998.-2207520000..&type=3")
 
-<h2>My Web Site View🕵️‍♂️ </h2>
-<h3 align="center">About Section🧒</h3>
-![About](assets/images/About.png)
+<h2>Overview My Profile🕵️‍♂️ </h2>
+
+<h3 align="center">HomeSection🧒</h3>
+
+![Home Section Img](assets/images/home.png)
 
 <p align="center">
 <a href="https://github.com/pasindulakshankudaligama/Readme-File-Styles">
