@@ -16,9 +16,34 @@ Format: ![Alt Text]("https://www.facebook.com/photo.php?fbid=1316465092140856&se
 
 <h2>Overview My Profile🕵️‍♂️ </h2>
 
-<h3 align="center">HomeSection🧒</h3>
+<h3 align="center">Home Section🧒</h3>
 
 ![Home Section Img](assets/images/home.png)
+
+
+<h3 align="center">About Me</h3>
+
+![Home Section Img](assets/images/about.png)
+
+<h3 align="center">Education & Experience</h3>
+
+![Home Section Img](assets/images/education.png)
+
+<h3 align="center">My Skills</h3>
+
+![Home Section Img](assets/images/skills.png)
+
+<h3 align="center">Projects</h3>
+
+![Home Section Img](assets/images/projects.png)
+
+<h3 align="center">Activities</h3>
+
+![Home Section Img](assets/images/activities.png)
+
+<h3 align="center">Contacts</h3>
+
+![Home Section Img](assets/images/contcts.png)
 
 
 ## :link: **Links**
