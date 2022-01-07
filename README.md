@@ -8,42 +8,42 @@
 - Programming Skills : Java, HTML, CSS, JavaScript, NodeJS
 - Design Skills : AdobeXD, Figma
 
-![PasinduLakshankudaligama](assets/images/1img.jpg)
+![PasinduLakshankudaligama](assets/img/1img.jpg)
 Format: ![Alt Text]("https://www.facebook.com/photo.php?fbid=1316465092140856&set=pb.100013321332998.-2207520000..&type=3")
 
-![PasinduLakshankudaligama](assets/images/2img.jpg)
+![PasinduLakshankudaligama](assets/img/2img.jpg)
 Format: ![Alt Text]("https://www.facebook.com/photo.php?fbid=1316465092140856&set=pb.100013321332998.-2207520000..&type=3")
 
 <h2>Overview My Profile🕵️‍♂️ </h2>
 
 <h3 align="center">Home Section🧒</h3>
 
-![Home Section Img](assets/images/home.png)
+![Home Section Img](assets/img/home.png)
 
 
 <h3 align="center">About Me</h3>
 
-![Home Section Img](assets/images/about.png)
+![Home Section Img](assets/img/about.png)
 
 <h3 align="center">Education & Experience</h3>
 
-![Home Section Img](assets/images/education.png)
+![Home Section Img](assets/img/education.png)
 
 <h3 align="center">My Skills</h3>
 
-![Home Section Img](assets/images/skills.png)
+![Home Section Img](assets/img/skills.png)
 
 <h3 align="center">Projects</h3>
 
-![Home Section Img](assets/images/projects.png)
+![Home Section Img](assets/img/projects.png)
 
 <h3 align="center">Activities</h3>
 
-![Home Section Img](assets/images/activities.png)
+![Home Section Img](assets/img/activities.png)
 
 <h3 align="center">Contacts</h3>
 
-![Home Section Img](assets/images/contcts.png)
+![Home Section Img](assets/img/contcts.png)
 
 
 ## :link: **Links**
