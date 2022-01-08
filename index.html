@@ -123,11 +123,18 @@
 
         }
 
-        main > section:nth-child(1) > div > h1:nth-child(3) {
+        main > section:nth-child(1) > div h1:nth-child(3) {
             margin: auto;
             font-size: 50px;
+            color: #1d33ab;
 
         }
+
+        #fullstack {
+            margin: auto;
+            font-size: 50px;
+        }
+
 
         main > section:nth-child(1) > div > div {
             display: flex;
@@ -150,8 +157,9 @@
             margin: 5px;
             cursor: pointer;
         }
+
         #aboutView {
-            height: 100vh;
+            height: 80vh;
         }
 
 
@@ -164,9 +172,10 @@
         }
 
         #aboutView > div > h1 {
-            position: absolute;
+            position: relative;
             font-size: 62px;
         }
+
         #educationView {
             height: 100vh;
         }
@@ -178,10 +187,12 @@
             align-items: center;
 
         }
+
         #educationView > div > h1 {
-            position: absolute;
+            position: relative;
             font-size: 62px;
         }
+
         #skillsView {
             height: 100vh;
         }
@@ -193,10 +204,12 @@
             align-items: center;
 
         }
+
         #skillsView > div > h1 {
-            position: absolute;
+            position: relative;
             font-size: 62px;
         }
+
         #projectsView {
             height: 100vh;
         }
@@ -208,8 +221,9 @@
             align-items: center;
 
         }
+
         #projectsView > div > h1 {
-            position: absolute;
+            position: relative;
             font-size: 62px;
         }
 
@@ -224,10 +238,12 @@
             align-items: center;
 
         }
+
         #activitiesView > div > h1 {
-            position: absolute;
+            position: relative;
             font-size: 62px;
         }
+
         #contactsView {
             height: 100vh;
         }
@@ -239,9 +255,21 @@
             align-items: center;
 
         }
+
         #contactsView > div > h1 {
-            position: absolute;
+            position: relative;
             font-size: 62px;
+        }
+
+        #aboutView > div:nth-child(2) {
+            /* background-image: url("assets/img/1.jpg");*/
+            position: absolute;
+            height: 400px;
+            background-repeat: no-repeat;
+            background-position: left;
+
+
+
         }
 
 
@@ -277,8 +305,9 @@
     <section id="view">
         <div>
             <h1>I'm</h1>
-            <h1>Pasindu Lakshan Kudaligama.</h1>
-            <h1>Full Stack Developer.</h1>
+            <h1>Pasindu Lakshan <br>
+                <h1>Kudaligama.</h1></br></h1>
+            <h1 id="fullstack">Full Stack Developer.</h1>
 
             <div>
                 <a href="https://www.instagram.com/pasindu_lakshan_kudaligama/">
@@ -307,6 +336,10 @@
     <section id="aboutView">
         <div>
             <h1>ABOUT ME</h1>
+
+        </div>
+        <div>
+            <img src="assets/img/1.jpg" alt="">
         </div>
     </section>
 
