@@ -1,0 +1,461 @@
+{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
+;
+}
+
+body > header {
+    position: relative;
+    height: 60px;
+    background-color: #917a7a;
+    box-shadow: 5px 6px 10px 1px rgba(0, 0, 0, 0.062);
+    z-index: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#view {
+    height: 100vh;
+}
+
+header > nav {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    /*background-image: url("assets/icon/logo.png");*/
+
+}
+
+header > img {
+    position: absolute;
+    left: 12px;
+    height: 110px;
+}
+
+header > nav > ul {
+    list-style: none;
+    text-align: center;
+}
+
+header > nav > ul > li {
+    display: inline;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+header > nav > ul > li:nth-child(1) {
+    margin: 30px;
+}
+
+header > nav > ul > li:nth-child(2) {
+    margin: 30px;
+}
+
+header > nav > ul > li:nth-child(3) {
+    margin: 30px;
+}
+
+header > nav > ul > li:nth-child(4) {
+    margin: 30px;
+}
+
+header > nav > ul > li:nth-child(5) {
+    margin: 30px;
+}
+
+header > nav > ul > li:nth-child(6) {
+    margin: 30px;
+}
+
+header > nav > ul > li:nth-child(7) {
+    margin: 30px;
+}
+
+header > nav > ul > li:hover {
+    color: darkgrey;
+}
+
+main > section:nth-child(1) {
+    background-image: url(assets/img/cover.img);
+    height: 857px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+main > section:nth-child(1) > div {
+    position: absolute;
+    top: 0;
+    left: 156px;
+    bottom: 0;
+    margin: auto;
+    height: 300px;
+    width: 925px;
+}
+
+main > section:nth-child(1) > div > h1:nth-child(1) {
+    margin: auto;
+    font-size: 50px;
+    animation-name: pasinduLakshan;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+
+
+}
+
+main > section:nth-child(1) > div > h1:nth-child(2) {
+    margin: auto;
+    color: #1d33ab;
+    font-size: 50px;
+    animation-name: pasinduLakshan;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+
+}
+
+main > section:nth-child(1) > div h1:nth-child(3) {
+    margin: auto;
+    font-size: 50px;
+    color: #1d33ab;
+    animation-name: pasinduLakshan;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+
+}
+
+#fullstack {
+    margin: auto;
+    font-size: 50px;
+}
+
+
+main > section:nth-child(1) > div > div {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    justify-content: space-evenly;
+    /* box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);*/
+    background-color: white;
+
+}
+
+@keyframes pasinduLakshan {
+    to {
+
+    }
+    from {
+        color: #eeeeee;
+
+    }
+}
+
+
+main > section:nth-child(1) > div > div > a > img {
+    width: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#aboutView {
+    position: relative;
+    height: 80vh;
+}
+
+
+#aboutView > div:nth-child(1) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutView > div:nth-child(2) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 250px;
+    left: 250px;
+
+}
+
+#aboutView > div > h1 {
+    position: relative;
+    font-size: 62px;
+}
+#info-div {
+    /* display: contents; */
+    position: relative;
+}
+
+#info-div > table {
+    margin-left: 145px;
+    /* border: 1px solid red; */
+}
+
+#info-div > table > caption {
+    text-align: left;
+    font-size: 30px;
+}
+
+.remove-list {
+    list-style: none;
+    padding: 0px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.remove-list > li,
+address > li {
+    margin-bottom: 22px;
+}
+
+.remove-list > address {
+    font-style: normal;
+}
+
+.remove-list > li > span {
+    font-weight: 700;
+}
+
+.remove-list > address > li > span > a {
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#right-list {
+    margin-left: 84px;
+}
+
+#cv-btn {
+    position: relative;
+    width: 338px;
+    height: 82px;
+    border: 5px solid #1d33ab;
+    background-color: transparent;
+    border-radius: 68px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    line-height: 32px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 147px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#cv-btn:hover {
+    background-color: #1d33ab;
+}
+
+#cv-btn > span {
+    text-transform: uppercase;
+    position: relative;
+    right: 30px;
+    letter-spacing: 2px;
+}
+
+#cv-btn > div {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    background-color:#1d33ab;
+    border-radius: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /* margin-right: -1px; */
+}
+
+#cv-btn svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-left: 19px;
+}
+
+#info-right-div {
+    /* background-color: rebeccapurple; */
+    /* border: 2px solid red; */
+    height: 300px;
+    width: 760px;
+    position: absolute;
+    top: 0px;
+    bottom: 0%;
+    right: 155px;
+    left: 1px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#info-right-div > div {
+    width: 357px;
+    height: 169px;
+    background: #212428;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+#info-right-div > div:nth-child(1) > span:nth-child(1) {
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54px;
+    color: #fec51c;
+    /* margin: 11px 239px 83px 45px; */
+    left: 35px;
+    top: 11px;
+}
+
+#info-right-div > div:nth-child(1) > span:nth-child(2) {
+    position: relative;
+    width: 185px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #ffffff;
+    left: 127px;
+    bottom: -15px;
+    display: block;
+}
+
+#info-right-div > div:nth-child(2) > span:nth-child(1) {
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54px;
+    color: #fec51c;
+    /* margin: 11px 239px 83px 45px; */
+    left: 35px;
+    top: 11px;
+}
+
+#info-right-div > div:nth-child(2) > span:nth-child(2) {
+    position: relative;
+    width: 185px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #ffffff;
+    left: 127px;
+    bottom: -15px;
+    display: block;
+}
+/* About Section End */
+
+
+#educationView {
+    height: 100vh;
+}
+
+#educationView > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#educationView > div > h1 {
+    position: relative;
+    font-size: 62px;
+}
+
+#skillsView {
+    height: 100vh;
+}
+
+#skillsView > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#skillsView > div > h1 {
+    position: relative;
+    font-size: 62px;
+}
+
+#projectsView {
+    height: 100vh;
+}
+
+#projectsView > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#projectsView > div > h1 {
+    position: relative;
+    font-size: 62px;
+}
+
+#activitiesView {
+    height: 100vh;
+}
+
+#activitiesView > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#activitiesView > div > h1 {
+    position: relative;
+    font-size: 62px;
+}
+
+#contactsView {
+    height: 100vh;
+}
+
+#contactsView > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#contactsView > div > h1 {
+    position: relative;
+    font-size: 62px;
+}
+
+#aboutView > div:nth-child(2) {
+    position: absolute;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: left;
+
+}

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/normalize.css"/>
     <link rel="stylesheet" href="assets/css/fonts/css/all.css">
     <style>
-
         {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
             Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
@@ -45,7 +44,7 @@
 
         header > img {
             position: absolute;
-            left: 0;
+            left: 12px;
             height: 110px;
         }
 
@@ -93,7 +92,7 @@
         }
 
         main > section:nth-child(1) {
-            background-image: url("assets/img/1img.jpg");
+            background-image: url("assets/img/cover.jpg");
             height: 857px;
             position: relative;
             background-repeat: no-repeat;
@@ -113,6 +112,13 @@
         main > section:nth-child(1) > div > h1:nth-child(1) {
             margin: auto;
             font-size: 50px;
+            animation-name: pasinduLakshan;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+
 
         }
 
@@ -120,6 +126,12 @@
             margin: auto;
             color: #1d33ab;
             font-size: 50px;
+            animation-name: pasinduLakshan;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
 
         }
 
@@ -127,6 +139,12 @@
             margin: auto;
             font-size: 50px;
             color: #1d33ab;
+            animation-name: pasinduLakshan;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
 
         }
 
@@ -146,42 +164,157 @@
 
         }
 
+        @keyframes pasinduLakshan {
+            to {
+
+            }
+            from {
+                color: #eeeeee;
+
+            }
+        }
+
+
         main > section:nth-child(1) > div > div > a > img {
             width: 40px;
-            /* color: peru;
-             font-size: 10px;
-             width: 10px;
-             height: 10px;
-             z-index: 100;
-             font-weight: 900;*/
             margin: 5px;
             cursor: pointer;
         }
 
         #aboutView {
+            position: relative;
             height: 80vh;
         }
 
 
-        #aboutView > div {
+        #aboutView > div:nth-child(1) {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        #aboutView > div:nth-child(2) {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 284px;
+            left: 118px;
+            margin: auto;
+
+        }
+
+        #aboutView > div:nth-child(3) {
+            position: relative;
+            background-color: rgba(71, 167, 255, 1);
+            border-radius: 68px;
+            box-sizing: border-box;
+            height: 464px;
+            width: 900px;
+            right: -357px;
+            top: 17px;
+            bottom: 0;
+            margin: auto;
+
 
         }
 
         #aboutView > div > h1 {
             position: relative;
             font-size: 62px;
+            text-align: center;
         }
 
+        #aboutView > div:nth-child(3) > h2 {
+            position: relative;
+            top: 13px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+        }
+
+        #aboutView > div:nth-child(3) > ul {
+            list-style: none;
+        }
+
+        #aboutView > div:nth-child(3) > ul > li > h3 {
+            position: relative;
+            top: 13px;
+            left: 0;
+            margin: 43px;
+
+        }
+
+
+        #cv-btn {
+            position: relative;
+            width: 251px;
+            height: 82px;
+            border: 5px solid #1d33ab;
+            background-color: transparent;
+            border-radius: 68px;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            line-height: 32px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 1500px;
+            margin-top: 27px;
+            cursor: pointer;
+        }
+
+        #cv-btn:hover {
+            background-color: #1d33ab;
+        }
+
+        #cv-btn > span {
+            /* text-transform: uppercase;*/
+            position: relative;
+            right: 30px;
+            letter-spacing: 2px;
+        }
+
+        #cv-btn > div {
+            position: absolute;
+            width: 72px;
+            height: 72px;
+            background-color: #1d33ab;
+            border-radius: 100%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            /* margin-right: -1px; */
+        }
+
+        #cv-btn svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-left: 19px;
+        }
+
+
+        /* About Section End */
+
+
         #educationView {
+            position: relative;
             height: 100vh;
         }
 
         #educationView > div {
-            position: relative;
+            /* position: relative;*/
             display: flex;
             justify-content: center;
             align-items: center;
@@ -244,6 +377,321 @@
             font-size: 62px;
         }
 
+
+
+        #aboutView > div:nth-child(2) {
+            position: absolute;
+            height: 247px;
+            background-repeat: no-repeat;
+            background-position: left;
+
+        }
+
+        #aboutView > div:nth-child(2) > img {
+            width: 572px;
+            position: relative;
+        }
+
+
+        #secBox {
+            position: absolute;
+            background-color: #1d33ab;
+            border-radius: 28px;
+            left: 12.32%;
+            right: 82%;
+            top: 20.2%;
+            bottom: 76.24%;
+            box-shadow: 0px 0px 20px 5px rgb(52 51 51 / 50%);
+        }
+
+        #secBox > h1 {
+            position: absolute;
+            color: black;
+            font-size: 1em;
+            text-align: center;
+            margin: 0.6700000000000017em 0;
+            left: 8px;
+            top: -4px;
+
+        }
+
+        #thirdBox {
+            position: absolute;
+            left: 11.28%;
+            right: 66.74%;
+            top: 24.14%;
+            bottom: 61.33%;
+            background-color: #1d33ab;
+            border-radius: 19px;
+            box-shadow: 0px 0px 20px 5px rgb(52 51 51 / 50%);
+        }
+
+        #thirdBox > h2 {
+            color: black;
+            text-align: center;
+        }
+
+        #big {
+            position: absolute;
+            left: 0.65%;
+            right: 85.1%;
+            top: 33.51%;
+            border: 4px solid #000000;
+            transform: rotate(90deg);
+        }
+
+        #short {
+            position: absolute;
+            left: 7.65%;
+            right: 88.1%;
+            top: 25.51%;
+            border: 4px solid #000000;
+            transform: rotate(180deg);
+        }
+
+        #circle {
+
+            border: 3px;
+            position: absolute;
+            width: 36px;
+            height: 33px;
+            left: 101px;
+            top: 233px;
+            border-radius: 20px;
+            background: #18E5CD;
+        }
+
+        /*   /______1boxEnd_____/*/
+
+
+        /*  /______2box_____/*/
+        #SB2 {
+            position: absolute;
+            background-color: #1d33ab;
+            border-radius: 28px;
+            left: 12.32%;
+            right: 82%;
+            top: 46.2%;
+            bottom: 50.2%;
+            box-shadow: 0px 0px 20px 5px rgb(52 51 51 / 50%);
+        }
+
+
+        #SB2 > h1 {
+            position: absolute;
+            color: black;
+            font-size: 1em;
+            text-align: center;
+            margin: 0.6700000000000017em 0;
+            left: 8px;
+            top: -4px;
+
+        }
+
+        #thirdBox2 {
+            position: absolute;
+            left: 11.28%;
+            right: 66.74%;
+            top: 50.14%;
+            bottom: 36.33%;
+            background: #1d33ab;
+            box-shadow: 0px 0px 20px 5px rgb(52 51 51 / 50%);
+            border-radius: 19px;
+        }
+
+        #thirdBox2 > h2 {
+            color: black;
+            text-align: center;
+        }
+
+        #big2 {
+            position: absolute;
+            left: 0.65%;
+            right: 85.1%;
+            top: 50.51%;
+            border: 4px solid #000000;
+            transform: rotate(
+                    90deg);
+        }
+
+        #big3 {
+            position: absolute;
+            left: -47.2%;
+            right: 85.1%;
+            top: 168.51%;
+            border: 4px solid #000000;
+            transform: rotate(
+                    90deg);
+        }
+
+        #short2 {
+            position: absolute;
+            left: 7.65%;
+            right: 88.1%;
+            top: 51.51%;
+            border: 4px solid #000000;
+            transform: rotate(
+                    180deg);
+        }
+
+        #circle2 {
+            border: 3px;
+            position: absolute;
+            width: 36px;
+            height: 33px;
+            left: 102px;
+            top: 473px;
+            border-radius: 20px;
+            background: #18E5CD;
+        }
+
+        /*  /______2boxEnd_____/*/
+
+        /*3box Start*/
+        #secBox4 {
+            position: absolute;
+            background-color: #1d33ab;
+            border-radius: 28px;
+            left: 57.32%;
+            right: 36%;
+            top: 20.2%;
+            bottom: 76.24%;
+            box-shadow: 0px 0px 20px 5px rgb(52 51 51 / 50%);
+        }
+
+        #secBox4 > h1 {
+            position: absolute;
+            color: black;
+            font-size: 1em;
+            text-align: center;
+            margin: 0.6700000000000017em 0;
+            left: 8px;
+            top: -4px;
+
+        }
+
+        #thirdBox4 {
+            position: absolute;
+            left: 56.28%;
+            right: 21.74%;
+            top: 24.14%;
+            bottom: 61.33%;
+            background-color: #1d33ab;
+            border-radius: 19px;
+            box-shadow: 0px 0px 20px 5px rgb(52 51 51 / 50%);
+        }
+
+        #thirdBox4 > h2 {
+            color: black;
+            text-align: center;
+        }
+
+        #big4 {
+            position: absolute;
+            left: 34.65%;
+            right: 29.1%;
+            top: 51.51%;
+            border: 4px solid #000000;
+            transform: rotate(
+                    90deg);
+        }
+
+        #short4 {
+            position: absolute;
+            left: 52.65%;
+            right: 42.1%;
+            top: 25.51%;
+            border: 4px solid #000000;
+            transform: rotate(180deg);
+        }
+
+        #circle4 {
+
+            border: 3px;
+            position: absolute;
+            width: 36px;
+            height: 33px;
+            left: 790px;
+            top: 233px;
+            border-radius: 20px;
+            background: #18E5CD;
+        }
+
+        /*3box End*/
+        /*4box Start*/
+        #secBox5 {
+            position: absolute;
+            background-color: #1d33ab;
+            border-radius: 28px;
+            left: 57.32%;
+            right: 36%;
+            top: 47.2%;
+            bottom: 49.24%;
+            box-shadow: 0px 0px 20px 5px rgb(52 51 51 / 50%);
+        }
+
+        #secBox5 > h1 {
+            position: absolute;
+            color: black;
+            font-size: 1em;
+            text-align: center;
+            margin: 0.6700000000000017em 0;
+            left: 8px;
+            top: -4px;
+
+        }
+
+        #thirdBox5 {
+            position: absolute;
+            left: 56.28%;
+            right: 21.74%;
+            top: 51.14%;
+            bottom: 35.33%;
+            background-color: #1d33ab;
+            border-radius: 19px;
+            box-shadow: 0px 0px 20px 5px rgb(52 51 51 / 50%);
+        }
+
+        #thirdBox5 > h2 {
+            color: black;
+            text-align: center;
+        }
+
+        /*  #big5{
+              position: absolute;
+              left: 34.65%;
+              right: 29.1%;
+              top: 51.51%;
+              border: 4px solid #000000;
+              transform: rotate(
+                      90deg);
+          }*/
+
+        #short5 {
+            position: absolute;
+            left: 52.65%;
+            right: 42.1%;
+            top: 51.51%;
+            border: 4px solid #000000;
+            transform: rotate(180deg);
+        }
+
+        #circle5 {
+
+            border: 3px;
+            position: absolute;
+            width: 36px;
+            height: 33px;
+            left: 792px;
+            top: 473px;
+            border-radius: 20px;
+            background: #18E5CD;
+        }
+
+        /*3box End*/
+
+        /*contact section Start*/
+
         #contactsView {
             height: 100vh;
         }
@@ -255,23 +703,230 @@
             align-items: center;
 
         }
-
         #contactsView > div > h1 {
             position: relative;
             font-size: 62px;
         }
 
-        #aboutView > div:nth-child(2) {
-            /* background-image: url("assets/img/1.jpg");*/
+        #contactEmail {
             position: absolute;
-            height: 400px;
-            background-repeat: no-repeat;
-            background-position: left;
+            height: 197px;
+            width: 291px;
+            left: 55px;
+            background-color: #1d33ab;
+            border-radius: 19px;
+            box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        #contactCall {
+            position: absolute;
+            top: -197px;
+            height: 197px;
+            width: 356px;
+            left: 370px;
+            background-color: #1d33ab;
+            border-radius: 19px;
+            box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+        }
+        #contactCall>h2{
+            position: relative;
+            font-size: 42px;
+            top: 1px;
+            left: 65px;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+        }
+        #contactCall>h3{
+            position: relative;
+            font-size: 33px;
+            top: 48px;
+            left: -74px;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            color: cornflowerblue;
+        }
+        #contactCall>i{
+            position: relative;
+            font-size: 42px;
+            top: -46px;
+            left: 125px;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+        }
+        #contactEmail>h2{
+            position: relative;
+            font-size: 42px;
+            top: -4px;
+            left: 116px;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+        }
+        #contactEmail>h3{
+            position: relative;
+            font-size: 16px;
+            top: 48px;
+            left: -74px;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            color: cornflowerblue;
+        }
+        #contactEmail>i{
+            position: relative;
+            font-size: 42px;
+            top: -46px;
+            left: 191px;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+        }
 
 
+        #contactFootprint {
+            position: absolute;
+            display: flex;
+            top: -151px;
+            height: 214px;
+            width: 677px;
+            top: -151px;
+            height: 214px;
+            width: 677px;
+            left: 55px;
+            background-color: #1d33ab;
+            justify-content: space-evenly;
+            border-radius: 19px;
+             box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
 
         }
 
+
+        #contactFootprint a > img {
+            position: relative;
+            bottom: 0;
+            left: -3px;
+            right: 0;
+            top: 43px;
+            width: 40px;
+            margin: 35px;
+            cursor: pointer;
+        }
+        #contactFootprint>h2{
+            font-size: 36px;
+            position: absolute;
+            bottom: 4px;
+            left: 81px;
+            top: 18px;
+            /*width: 50px;*/
+            margin: 25px;
+        /*    background-color: black;*/
+        }
+        #contactFootprint>h2>span{
+            color: blue;
+        }
+
+        #contactDetails{
+            position: absolute;
+            height: 624px;
+            width: 1000px;
+            right: -335px;
+            top: -610px;
+            bottom: 0;
+            margin: auto;
+            border-radius: 19px;
+            box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+            background-color: #1d33ab;
+
+        }
+        #send-btn {
+            position: relative;
+            width: 139px;
+            height: 65px;
+            border: 5px solid #1d33ab;
+            background-color: transparent;
+            border-radius: 68px;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            line-height: 32px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 861px;
+            margin-top: 764px;
+            cursor: pointer;
+        }
+
+        #send-btn:hover {
+            background-color: #1d33ab;
+        }
+
+      /*  #send-btn > span {
+            !* text-transform: uppercase;*!
+            position: relative;
+            right: 30px;
+            letter-spacing: 2px;
+        }
+
+        #send-btn > div {
+            position: absolute;
+            width: 72px;
+            height: 72px;
+            background-color: #1d33ab;
+            border-radius: 100%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            !* margin-right: -1px; *!
+        }*/
+
+        #send-btn svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-left: 19px;
+        }
+
+        #contactBtnDiv{
+            position: relative;
+            margin: auto;
+            left: 490px;
+        }
+        #contactBtn{
+            width: 161px;
+            height: 53px;
+           background-color: #1d33ab;
+            box-shadow: -1px 2px 16px #1d33ab;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 30px;
+            color: black;
+            border: 0;
+            font-family: 'Saira Condensed', sans-serif;
+        }
+        #contactBtn:hover{
+            color: white;
+            cursor: pointer;
+        }
+        /*contact section End*/
 
     </style>
 </head>
@@ -336,17 +991,103 @@
     <section id="aboutView">
         <div>
             <h1>ABOUT ME</h1>
+        </div>
 
+        <div>
+            <img src="assets/img/img.png" alt="">
+        </div>
+        <!-- <h3>PERSONAL INFOS</h3> -->
+        <div>
+
+            <h2>Personal Information</h2>
+            <ul>
+                <li>
+                    <h3>Name: <span>Pasindu Lakshan Kudaligama</span></h3>
+                    <h3>Age: <span>24</span></h3>
+                    <h3>Nationality: <span>Sri Lankan</span></h3>
+                    <h3>Phone Number: <span>+94 702616332</span></h3>
+                    <h3>Email: <span>kudaligamagepasindulakshan@gmail.com</span></h3>
+                </li>
+            </ul>
         </div>
         <div>
-            <img src="assets/img/1.jpg" alt="">
+            <!-- Download CV Btn Start-->
+            <button id="cv-btn">
+                <span>Download CV</span>
+                <div>
+                    <svg>
+                        <use xlink:href="#download_icon"></use>
+                    </svg>
+                </div>
+            </button>
+            <!-- Download CV Btn End-->
         </div>
+
     </section>
 
+
+
+  <!--  <i class="fas fa-wifi"></i>-->
     <section id="educationView">
         <div>
             <h1>EDUCATION & EXPERIENCE</h1>
         </div>
+        <div id="mainbox">
+            <hr id="big">
+            <hr id="short">
+            <div id="circle"></div>
+            <div id="secBox"><h1>2002-2013</h1></div>
+            <div id="thirdBox">
+                <h2>
+                    Primary & Secondary Education
+                    <br>
+                    Bulathsinhala National School
+                </h2>
+            </div>
+        </div>
+        <div id="mainbox2">
+            <hr id="big2">
+            <hr id="short2">
+            <div id="circle2"></div>
+            <div id="SB2"><h1>2013-2016</h1></div>
+            <div id="thirdBox2">
+                <h2>
+                    Advanced Level
+                    <br>
+                    Sripalee College
+                </h2>
+                <hr id="big3">
+            </div>
+
+
+        </div>
+        <div id="mainbox4">
+            <hr id="big4">
+            <hr id="short4">
+            <div id="circle4"></div>
+            <div id="secBox4"><h1>2019-Present</h1></div>
+            <div id="thirdBox4">
+                <h2>
+                    Higher Education
+                    <br>
+                    Aquinas College-Diploma in English
+                </h2>
+            </div>
+        </div>
+        <div id="mainbox5">
+            <hr id="big5">
+            <hr id="short5">
+            <div id="circle5"></div>
+            <div id="secBox5"><h1>2020-Present</h1></div>
+            <div id="thirdBox5">
+                <h2>
+                    Higher Education
+                    <br>
+                    Graduate Diploma In Software Engineering-IJSE
+                </h2>
+            </div>
+        </div>
+
     </section>
 
     <section id="skillsView">
@@ -367,6 +1108,54 @@
     <section id="contactsView">
         <div>
             <h1>CONTACTS</h1>
+        </div>
+        <div id="contactEmail">
+            <i class="fas fa-at"></i>
+            <h2>Email</h2>
+            <h3>pasindulakshankudaligama@gmail.com</h3>
+        </div>
+        <div id="contactCall">
+            <i class="fas fa-phone-alt"></i>
+            <h2>Call</h2>
+            <h3>+94 702616332</h3>
+        </div>
+        <div id="contactFootprint">
+
+            <h2>MY DIGITAL <span>FOOTPRINTS</span></h2>
+            <a href="https://www.instagram.com/pasindu_lakshan_kudaligama/">
+                <img src="assets/icon/instagram.png" alt="Insta_Icon">
+            </a>
+            <a href="https://www.facebook.com/pasindulakshankudaligama1999">
+                <img src="assets/icon/facebook.png" alt="FB_Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/pasindu-lakshan-kudaligama-73bbaa214/">
+                <img src="assets/icon/linkedin.png" alt="Linkedin_Icon">
+            </a>
+            <a href="https://github.com/pasindulakshankudaligama">
+                <img src="assets/icon/github-sign.png" alt="Github_Icon">
+            </a>
+            <a href="https://twitter.com/lakshan_997">
+                <img src="assets/icon/twitter-logo-on-black-background.png" alt="Twitter_Icon">
+            </a>
+            <a href="">
+                <img src="assets/icon/pinterest.png" alt="Pinterest_Icon">
+            </a>
+
+        </div>
+        <div id="chatBox">
+                <div id="contactBtnDiv" ><br>
+                    <input id="contactBtn" type="submit" value="SEND" >
+                </div>
+
+          <!--  <button id="send-btn">
+                <span>Send</span>
+                <div>
+                    <svg>
+                       &lt;!&ndash; <use xlink:href="#download_icon"></use>&ndash;&gt;
+                    </svg>
+                </div>
+            </button>-->
+            <!-- send Btn End-->
         </div>
     </section>
 
