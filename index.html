@@ -709,7 +709,7 @@
         }
 
         #contactEmail {
-            position: absolute;
+            position: relative;
             height: 197px;
             width: 291px;
             left: 55px;
@@ -719,7 +719,7 @@
         }
 
         #contactCall {
-            position: absolute;
+            position: relative;
             top: -197px;
             height: 197px;
             width: 356px;
@@ -793,7 +793,7 @@
 
 
         #contactFootprint {
-            position: absolute;
+            position: relative;
             display: flex;
             top: -151px;
             height: 214px;
@@ -906,7 +906,7 @@
         #contactBtnDiv{
             position: relative;
             margin: auto;
-            left: 490px;
+            left: 274px;
         }
         #contactBtn{
             width: 161px;
@@ -925,6 +925,40 @@
         #contactBtn:hover{
             color: white;
             cursor: pointer;
+        }
+        #chatBox{
+            position: absolute;
+            height: 624px;
+            width: 1000px;
+            right: -335px;
+            top: -610px;
+            bottom: 0;
+            margin: auto;
+            border-radius: 19px;
+            box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+           /* background-color: #1d33ab;*/
+        }
+        .lbl{
+            left: 35px;
+            color: black;
+            margin-top: 31px;
+            font-weight: bold;
+            font-size: 33px;
+            font-family: 'Saira Condensed', sans-serif;
+        }
+        .inp{
+            border: 4px solid black;
+            width: 643px;
+            height: 44px;
+            font-size: 26px;
+        }
+        .inp2{
+            border: 4px solid black;
+            width: 643px;
+            font-size: 26px;
+            border-radius: 20px;
+            padding: unset;
+            margin: unset;
         }
         /*contact section End*/
 
@@ -1143,6 +1177,25 @@
 
         </div>
         <div id="chatBox">
+            <form action="" method="get" class="form-example">
+                <div>
+                    <label class="lbl" for="name">Full Name </label><br>
+                    <input class="inp" type="text" name="name" id="name" required>
+                </div><br>
+                <div>
+                    <label class="lbl" for="email">E-mail </label><br>
+                    <input class="inp" type="email" name="email" id="email" required>
+                </div><br>
+                <div >
+                    <label class="lbl" for="Subject">Subject </label><br>
+                    <input class="inp"  type="text" name="subject" id="subject" required>
+                </div>
+                <br>
+                <div>
+                    <label class="lbl" >Massage </label><br>
+                    <textarea class="inp2" id="message" rows="7">
+                </textarea>
+                </div>
                 <div id="contactBtnDiv" ><br>
                     <input id="contactBtn" type="submit" value="SEND" >
                 </div>
@@ -1156,6 +1209,7 @@
                 </div>
             </button>-->
             <!-- send Btn End-->
+                </form>
         </div>
     </section>
 
