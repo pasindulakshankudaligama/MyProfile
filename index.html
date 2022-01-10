@@ -344,7 +344,7 @@
         }
 
 
-        #activitiesView {
+    /*    #activitiesView {
             height: 100vh;
         }
 
@@ -359,7 +359,7 @@
         #activitiesView > div > h1 {
             position: relative;
             font-size: 62px;
-        }
+        }*/
 
 
         #aboutView > div:nth-child(2) {
@@ -1133,13 +1133,21 @@
             left: 0;
             right: 0;
             margin: auto;
-            width: 407px;
+            width: 421px;
             height: 403px;
             border-radius: 75px;
         }
+        .activity_img {
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover;
+        }
 
         #activity_img1 {
-            background-image: url("assets/img/1img.jpg");
+            background-image: url("assets/project/telesco.jpg");
+        width: 400px;
+            position: relative;
+
         }
 
         #activity_img2 {
@@ -1153,8 +1161,8 @@
         .content {
             transition: 0.5s cubic-bezier(0.4, 0, 1, 1);
             opacity: 0;
-            position: absolute;
-            top: 108%;
+            position: relative;
+            top: 10%;
             right: 11px;
             left: 43px;
             margin: auto;
@@ -1163,6 +1171,34 @@
             font-weight: bold;
             font-family: 'Saira Condensed', sans-serif;
         }
+        #activity_btn{
+            position: relative;
+            top: 18%;
+            right: 111px;
+            left: -173px;
+            margin: auto;
+            width: 100px;
+        }
+        .see_more_btn:hover {
+            color: white;
+        }
+        .see_more_btn {
+            width: 443px;
+            height: 72px;
+            border: 5px solid #2ae7d0;
+            background-color: #1ee5ce;
+            border-radius: 68px;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 10px 5px rgb(0 0 0 / 25%);
+            color: black;
+            line-height: 34px;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            font-family: 'Saira Condensed', sans-serif;
+        }
+
 
         /*Project section End*/
 
@@ -1359,37 +1395,44 @@
     </section>
     <section id="projectsView">
         <div>
-            <h1>PROJECTS</h1>
+            <h1>PROJECTS & ASSIGNMENTS</h1>
         </div>
         <div id="activity_container">
-            <a href="">
+            <a href="https://github.com/pasindulakshankudaligama/StudentManagementSystem">
                 <div class="activity_card_div">
                     <div id="activity_img1" class="activity_img">
                     </div>
                     <div class="content">Final Project - Student Management System</div>
                 </div>
             </a>
-            <a href="">
+            <a href="https://github.com/pasindulakshankudaligama/Sipsewana_Student_Management_System">
                 <div class="activity_card_div">
                     <div id="activity_img2" class="activity_img">
-                    </div>
-                    <div class="content">Panda Creation - POS System</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="activity_card_div">
-                    <div id="activity_img3" class="activity_img">
                     </div>
                     <div class="content">Sipsewana Student Management System</div>
                 </div>
             </a>
+            <a href="https://github.com/pasindulakshankudaligama/Jayasena_Super_Market_System">
+                <div class="activity_card_div">
+                    <div id="activity_img3" class="activity_img">
+                    </div>
+                    <div class="content">Jayasena Super Market System(JDBC)</div>
+                </div>
+            </a>
+        </div>
+        <div id="activity_btn">
+            <a href="moreProjects&Assignment.html" target="_blank">
+                <button class="see_more_btn">
+                    Click Here To See More
+                </button>
+            </a>
         </div>
     </section>
-    <section id="activitiesView">
+  <!--  <section id="activitiesView">
         <div>
             <h1>ACTIVITIES</h1>
         </div>
-    </section>
+    </section>-->
     <section id="contactsView">
         <div>
             <h1>CONTACTS</h1>

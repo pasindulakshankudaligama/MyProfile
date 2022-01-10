@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html><!--Main Root-->
+
+<!--Document meta data-->
+<head>
+    <title>Pasindu Lakshan kudaligama | My Profile</title>
+    <!--<base href="https://pasindulakshankudaligama.000webhostapp.com/">-->
+    <meta content="Pasindu , Lakshan , Kudaligama" name="keywords">
+    <meta content="Describe my skills and my performance" name="description">
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <meta content="red" name="theme-color">
+    <!--add normalize css-->
+    <link rel="stylesheet" href="assets/css/normalize.css"/>
+    <link rel="stylesheet" href="assets/css/fonts/css/all.css">
+    <style>
+        #projectsView {
+            height: 349vh;
+        }
+
+        #projectsView > div:nth-child(1) {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #projectsView > div > h1 {
+            position: relative;
+            font-size: 62px;
+        }
+
+        #activity_container {
+            position: relative;
+            top: 2px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1572px;
+        }
+
+        .activity_card_div {
+            position: relative;
+            width: 430px;
+            height: 423px;
+            /*   background: #212428;*/
+            box-shadow: 0px 0px 10px 10px rgb(24 229 205);
+            border-radius: 86px;
+        }
+
+        .activity_card_div:hover {
+            transform: scale(1.1);
+        }
+
+        .activity_card_div:hover > .activity_img {
+            opacity: 20%;
+        }
+
+        .activity_card_div:hover > .content {
+            opacity: 100%;
+            transform: scale(1.1);
+        }
+
+        .activity_card_div > div:nth-child(1) {
+            position: relative;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 421px;
+            height: 403px;
+            border-radius: 75px;
+        }
+
+        #activity_img1 {
+            background-image: url("assets/project/telesco.jpg");
+            width: 400px;
+            position: relative;
+
+        }
+
+        #activity_img2 {
+            background-image: url("assets/img/1img.jpg");
+        }
+
+        #activity_img3 {
+            background-image: url("assets/img/1img.jpg");
+        }
+
+        .content {
+            transition: 0.5s cubic-bezier(0.4, 0, 1, 1);
+            opacity: 0;
+            position: relative;
+            top: 10%;
+            right: 11px;
+            left: 43px;
+            margin: auto;
+            font-size: 35px;
+            color: black;
+            font-weight: bold;
+            font-family: 'Saira Condensed', sans-serif;
+        }
+      /*  first containeer End*/
+
+       /*second containeer Start*/
+        #assignmentId {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 168px;
+
+        }
+
+        #h1assignmentId {
+            position: relative;
+            font-size: 62px;
+        }
+
+
+        #activity_container2 {
+            position: relative;
+            top: 197px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1572px;
+        }
+        .activity_img {
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover;
+        }
+        #activity_img4 {
+            background-image: url("assets/project/telesco.jpg");
+            width: 400px;
+            position: relative;
+
+        }
+        #activity_img5 {
+            background-image: url("assets/img/1img.jpg");
+        }
+
+        #activity_img6 {
+            background-image: url("assets/img/1img.jpg");
+        }
+        /*second containeer End*/
+
+        /*third containeeer start*/
+
+        #activity_container3 {
+            position: relative;
+            top: 373px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1572px;
+        }
+        #activity_img7 {
+            background-image: url("assets/project/telesco.jpg");
+            width: 400px;
+            position: relative;
+
+        }
+        #activity_img8{
+            background-image: url("assets/img/1img.jpg");
+        }
+
+        #activity_img9 {
+            background-image: url("assets/img/1img.jpg");
+        }
+        /*third containeeer End*/
+        /*Fourth containeeer Start*/
+        #activity_container4 {
+            position: relative;
+            top: 546px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1572px;
+        }
+        #activity_img10 {
+            background-image: url("assets/project/telesco.jpg");
+            width: 400px;
+            position: relative;
+
+        }
+        #activity_img11{
+            background-image: url("assets/img/1img.jpg");
+        }
+
+        #activity_img12 {
+            background-image: url("assets/img/1img.jpg");
+        }
+        /*Fourth containeeer End*/
+        /*Fifth containeeer Start*/
+        #activity_container5 {
+            position: relative;
+            top: 730px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 971px;
+        }
+        #activity_img13 {
+            background-image: url("assets/project/telesco.jpg");
+
+
+        }
+        #activity_img14{
+            background-image: url("assets/img/1img.jpg");
+        }
+        /*Fifth containeeer End*/
+    </style>
+</head>
+<body>
+<section id="projectsView">
+    <div>
+        <h1>PROJECTS</h1>
+    </div>
+    <div id="activity_container">
+        <a href="https://github.com/pasindulakshankudaligama/StudentManagementSystem">
+            <div class="activity_card_div">
+                <div id="activity_img1" class="activity_img">
+                </div>
+                <div class="content">Final Project - Student Management System</div>
+            </div>
+        </a>
+        <a href="https://github.com/pasindulakshankudaligama/Sipsewana_Student_Management_System">
+            <div class="activity_card_div">
+                <div id="activity_img2" class="activity_img">
+                </div>
+                <div class="content">Sipsewana Student Management System</div>
+            </div>
+        </a>
+        <a href="https://github.com/pasindulakshankudaligama/Jayasena_Super_Market_System">
+            <div class="activity_card_div">
+                <div id="activity_img3" class="activity_img">
+                </div>
+                <div class="content">Jayasena Super Market System(JDBC)</div>
+            </div>
+        </a>
+    </div>
+    <div id="assignmentId">
+        <h1 id="h1assignmentId">ASSIGNMENTS</h1>
+    </div>
+    <div id="activity_container2">
+        <a href="https://github.com/pasindulakshankudaligama/StudentManagementSystem">
+            <div class="activity_card_div">
+                <div id="activity_img4" class="activity_img">
+                </div>
+                <div class="content">Final Project - Student Management System</div>
+            </div>
+        </a>
+        <a href="https://github.com/pasindulakshankudaligama/Sipsewana_Student_Management_System">
+            <div class="activity_card_div">
+                <div id="activity_img5" class="activity_img">
+                </div>
+                <div class="content">Sipsewana Student Management System</div>
+            </div>
+        </a>
+        <a href="https://github.com/pasindulakshankudaligama/Jayasena_Super_Market_System">
+            <div class="activity_card_div">
+                <div id="activity_img6" class="activity_img">
+                </div>
+                <div class="content">Jayasena Super Market System(JDBC)</div>
+            </div>
+        </a>
+    </div>
+
+    <div id="activity_container3">
+        <a href="https://github.com/pasindulakshankudaligama/StudentManagementSystem">
+            <div class="activity_card_div">
+                <div id="activity_img7" class="activity_img">
+                </div>
+                <div class="content">Final Project - Student Management System</div>
+            </div>
+        </a>
+        <a href="https://github.com/pasindulakshankudaligama/Sipsewana_Student_Management_System">
+            <div class="activity_card_div">
+                <div id="activity_img8" class="activity_img">
+                </div>
+                <div class="content">Sipsewana Student Management System</div>
+            </div>
+        </a>
+        <a href="https://github.com/pasindulakshankudaligama/Jayasena_Super_Market_System">
+            <div class="activity_card_div">
+                <div id="activity_img9" class="activity_img">
+                </div>
+                <div class="content">Jayasena Super Market System(JDBC)</div>
+            </div>
+        </a>
+    </div>
+    <div id="activity_container4">
+        <a href="https://github.com/pasindulakshankudaligama/StudentManagementSystem">
+            <div class="activity_card_div">
+                <div id="activity_img10" class="activity_img">
+                </div>
+                <div class="content">Final Project - Student Management System</div>
+            </div>
+        </a>
+        <a href="https://github.com/pasindulakshankudaligama/Sipsewana_Student_Management_System">
+            <div class="activity_card_div">
+                <div id="activity_img11" class="activity_img">
+                </div>
+                <div class="content">Sipsewana Student Management System</div>
+            </div>
+        </a>
+        <a href="https://github.com/pasindulakshankudaligama/Jayasena_Super_Market_System">
+            <div class="activity_card_div">
+                <div id="activity_img12" class="activity_img">
+                </div>
+                <div class="content">Jayasena Super Market System(JDBC)</div>
+            </div>
+        </a>
+    </div>
+
+    <div id="activity_container5">
+        <a href="https://github.com/pasindulakshankudaligama/StudentManagementSystem">
+            <div class="activity_card_div">
+                <div id="activity_img13" class="activity_img">
+                </div>
+                <div class="content">Final Project - Student Management System</div>
+            </div>
+        </a>
+        <a href="https://github.com/pasindulakshankudaligama/Sipsewana_Student_Management_System">
+            <div class="activity_card_div">
+                <div id="activity_img14" class="activity_img">
+                </div>
+                <div class="content">Sipsewana Student Management System</div>
+            </div>
+        </a>
+        </div>
+</section>
+</body>
+</html>
