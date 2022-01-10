@@ -10,8 +10,8 @@
     <meta content="width=device-width initial-scale=1" name="viewport">
     <meta content="red" name="theme-color">
     <!--add normalize css-->
-    <link rel="stylesheet" href="assets/css/normalize.css"/>
-    <link rel="stylesheet" href="assets/css/fonts/css/all.css">
+    <link href="assets/css/normalize.css" rel="stylesheet"/>
+    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
     <style>
         {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -57,6 +57,11 @@
             display: inline;
             margin-left: 60px;
             cursor: pointer;
+        }
+
+        header > nav > ul > li > a {
+            color: white;
+            text-decoration: none;
         }
 
         header > nav > ul > li:nth-child(1) {
@@ -255,6 +260,11 @@
 
         #aboutView > div:nth-child(3) > ul > li > h3 > span {
             color: black;
+
+        }
+
+        #aboutView > div:nth-child(3) > ul > li > h3 > a {
+            text-decoration: black;
         }
 
 
@@ -743,8 +753,13 @@
             right: 0;
             margin: auto;
             text-align: center;
-            color: cornflowerblue;
+            /*color: cornflowerblue;*/
         }
+
+        #contactCall > h3 > a {
+            text-decoration: none;
+        }
+
 
         #contactCall > i {
             position: relative;
@@ -778,6 +793,10 @@
             margin: auto;
             text-align: center;
             color: cornflowerblue;
+        }
+
+        #contactEmail > h3 > a {
+            text-decoration: none;
         }
 
         #contactEmail > i {
@@ -1277,7 +1296,7 @@
 <!--content sectioning-->
 <header>
     <!--Header Navigation bar -->
-    <img src="assets/icon/logo.png" alt="logo">
+    <img alt="logo" src="assets/icon/logo.png">
     <nav>
 
         <ul>
@@ -1285,13 +1304,13 @@
             <!-- <li>
                  <img src="assets/icon/logo.png">
              </li>-->
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Education & Experience</li>
-            <li>My Skills</li>
-            <li>Projects</li>
-            <li>Activities</li>
-            <li>Contacts</li>
+
+            <li><a href="#view">Home</a></li>
+            <li><a href="#aboutView">About Me</a></li>
+            <li><a href="#educationView">Education & Experience</a></li>
+            <li><a href="#skillsView">My Skills</a></li>
+            <li><a href="#projectsView">Projects</a></li>
+            <li><a href="#contactsView">Contacts</a></li>
 
         </ul>
     </nav>
@@ -1307,22 +1326,22 @@
 
             <div>
                 <a href="https://www.instagram.com/pasindu_lakshan_kudaligama/">
-                    <img src="assets/icon/instagram.png" alt="Insta_Icon">
+                    <img alt="Insta_Icon" src="assets/icon/instagram.png">
                 </a>
                 <a href="https://www.facebook.com/pasindulakshankudaligama1999">
-                    <img src="assets/icon/facebook.png" alt="FB_Icon">
+                    <img alt="FB_Icon" src="assets/icon/facebook.png">
                 </a>
                 <a href="https://www.linkedin.com/in/pasindu-lakshan-kudaligama-73bbaa214/">
-                    <img src="assets/icon/linkedin.png" alt="Linkedin_Icon">
+                    <img alt="Linkedin_Icon" src="assets/icon/linkedin.png">
                 </a>
                 <a href="https://github.com/pasindulakshankudaligama">
-                    <img src="assets/icon/github-sign.png" alt="Github_Icon">
+                    <img alt="Github_Icon" src="assets/icon/github-sign.png">
                 </a>
                 <a href="https://twitter.com/lakshan_997">
-                    <img src="assets/icon/twitter-logo-on-black-background.png" alt="Twitter_Icon">
+                    <img alt="Twitter_Icon" src="assets/icon/twitter-logo-on-black-background.png">
                 </a>
                 <a href="">
-                    <img src="assets/icon/pinterest.png" alt="Pinterest_Icon">
+                    <img alt="Pinterest_Icon" src="assets/icon/pinterest.png">
                 </a>
 
             </div>
@@ -1335,7 +1354,7 @@
         </div>
 
         <div>
-            <img src="assets/img/img.png" alt="">
+            <img alt="" src="assets/img/img.png">
         </div>
         <!-- <h3>PERSONAL INFOS</h3> -->
         <div>
@@ -1347,22 +1366,26 @@
                     <h3>Age: <span>24 Years.</span></h3>
                     <h3>Nationality: <span>Sri Lankan.</span></h3>
                     <h3>Phone Number: <a href="+94 702616332"><span>+94 702616332</span></a></h3>
-                    <h3>Email: <a href="kudaligamagepasindulakshan@gmail.com"><span>kudaligamagepasindulakshan@gmail.com</span></a></h3>
+                    <h3>Email: <a
+                            href="kudaligamagepasindulakshan@gmail.com"><span>kudaligamagepasindulakshan@gmail.com</span></a>
+                    </h3>
                 </li>
             </ul>
         </div>
         <div>
             <!-- Download CV Btn Start-->
-            <button id="cv-btn">
-                <span>Download CV</span>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                    </svg>
-                </div>
-            </button>
+            <a href="https://drive.google.com/uc?id=1ochHanvdL2fGu_8vHh_DzVS5jQS61CM0&export=download">
+                <button id="cv-btn">
+                    <span>Download CV</span>
+                    <div>
+                        <svg class="bi bi-download" fill="currentColor" height="16" viewBox="0 0 16 16"
+                             width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                        </svg>
+                    </div>
+                </button>
+            </a>
             <!-- Download CV Btn End-->
         </div>
 
@@ -1440,28 +1463,29 @@
         <div id="slider">
             <div id="slid-con-div">
                 <div class="slid-div">
-                    <div id="img_1" class="img-div"></div>
+                    <div class="img-div" id="img_1"></div>
                 </div>
 
                 <div class="slid-div">
-                    <div id="img_2" class="img-div"></div>
+                    <div class="img-div" id="img_2"></div>
                 </div>
 
                 <div class="slid-div">
-                    <div id="img_3" class="img-div"></div>
+                    <div class="img-div" id="img_3"></div>
                 </div>
 
                 <div class="slid-div">
-                    <div id="img_4" class="img-div"></div>
+                    <div class="img-div" id="img_4"></div>
                 </div>
 
                 <div class="slid-div">
-                    <div id="img_5" class="img-div"></div>
+                    <div class="img-div" id="img_5"></div>
                 </div>
             </div>
         </div>
 
     </section>
+
     <section id="projectsView">
         <div>
             <h1>PROJECTS & ASSIGNMENTS</h1>
@@ -1469,21 +1493,21 @@
         <div id="activity_container">
             <a href="https://github.com/pasindulakshankudaligama/StudentManagementSystem">
                 <div class="activity_card_div">
-                    <div id="activity_img1" class="activity_img">
+                    <div class="activity_img" id="activity_img1">
                     </div>
                     <div class="content">Final Project - Student Management System</div>
                 </div>
             </a>
             <a href="https://github.com/pasindulakshankudaligama/Sipsewana_Student_Management_System">
                 <div class="activity_card_div">
-                    <div id="activity_img2" class="activity_img">
+                    <div class="activity_img" id="activity_img2">
                     </div>
                     <div class="content">Sipsewana Student Management System</div>
                 </div>
             </a>
             <a href="https://github.com/pasindulakshankudaligama/Jayasena_Super_Market_System">
                 <div class="activity_card_div">
-                    <div id="activity_img3" class="activity_img">
+                    <div class="activity_img" id="activity_img3">
                     </div>
                     <div class="content">Jayasena Super Market System(JDBC)</div>
                 </div>
@@ -1509,51 +1533,51 @@
         <div id="contactEmail">
             <i class="fas fa-at"></i>
             <h2>Email</h2>
-            <h3>pasindulakshankudaligama@gmail.com</h3>
+            <h3><a href="pasindulakshankudaligama@gmail.com">pasindulakshankudaligama@gmail.com</a></h3>
         </div>
         <div id="contactCall">
             <i class="fas fa-phone-alt"></i>
             <h2>Call</h2>
-            <h3>+94 702616332</h3>
+            <h3><a href="+94 702616332">+94 702616332</a></h3>
         </div>
         <div id="contactFootprint">
 
             <h2>MY DIGITAL <span>FOOTPRINTS</span></h2>
             <a href="https://www.instagram.com/pasindu_lakshan_kudaligama/">
-                <img src="assets/icon/instagram.png" alt="Insta_Icon">
+                <img alt="Insta_Icon" src="assets/icon/instagram.png">
             </a>
             <a href="https://www.facebook.com/pasindulakshankudaligama1999">
-                <img src="assets/icon/facebook.png" alt="FB_Icon">
+                <img alt="FB_Icon" src="assets/icon/facebook.png">
             </a>
             <a href="https://www.linkedin.com/in/pasindu-lakshan-kudaligama-73bbaa214/">
-                <img src="assets/icon/linkedin.png" alt="Linkedin_Icon">
+                <img alt="Linkedin_Icon" src="assets/icon/linkedin.png">
             </a>
             <a href="https://github.com/pasindulakshankudaligama">
-                <img src="assets/icon/github-sign.png" alt="Github_Icon">
+                <img alt="Github_Icon" src="assets/icon/github-sign.png">
             </a>
             <a href="https://twitter.com/lakshan_997">
-                <img src="assets/icon/twitter-logo-on-black-background.png" alt="Twitter_Icon">
+                <img alt="Twitter_Icon" src="assets/icon/twitter-logo-on-black-background.png">
             </a>
             <a href="">
-                <img src="assets/icon/pinterest.png" alt="Pinterest_Icon">
+                <img alt="Pinterest_Icon" src="assets/icon/pinterest.png">
             </a>
 
         </div>
         <div id="chatBox">
-            <form action="" method="get" class="form-example">
+            <form action="" class="form-example" method="get">
                 <div>
                     <label class="lbl" for="name">Your Full Name </label><br>
-                    <input class="inp" type="text" name="name" id="name" required>
+                    <input class="inp" id="name" name="name" required type="text">
                 </div>
                 <br>
                 <div>
                     <label class="lbl" for="email">Your E-mail </label><br>
-                    <input class="inp" type="email" name="email" id="email" required>
+                    <input class="inp" id="email" name="email" required type="email">
                 </div>
                 <br>
                 <div>
                     <label class="lbl" for="Subject">Subject </label><br>
-                    <input class="inp" type="text" name="subject" id="subject" required>
+                    <input class="inp" id="subject" name="subject" required type="text">
                 </div>
                 <br>
                 <div>
