@@ -208,12 +208,14 @@
         #aboutView > div:nth-child(3) {
             position: relative;
             background-color: rgba(71, 167, 255, 1);
+            /* box-shadow: 0px 0px 10px 10px rgb(24 229 205);*/
+            box-shadow: 0px 0px 20px 5px rgb(52 51 51 / 50%);
             border-radius: 68px;
             box-sizing: border-box;
             height: 464px;
             width: 900px;
             right: -357px;
-            top: 17px;
+            top: -23px;
             bottom: 0;
             margin: auto;
 
@@ -227,12 +229,14 @@
         }
 
         #aboutView > div:nth-child(3) > h2 {
-            position: relative;
-            top: 13px;
+            position: absolute;
+            top: 15px;
             left: 0;
             right: 0;
             margin: auto;
             text-align: center;
+            font-size: 48px;
+            color: #eeeeee;
         }
 
         #aboutView > div:nth-child(3) > ul {
@@ -240,11 +244,17 @@
         }
 
         #aboutView > div:nth-child(3) > ul > li > h3 {
+
             position: relative;
-            top: 13px;
+            top: 85px;
             left: 0;
             margin: 43px;
+            font-size: 30px;
+            color: #212428;
+        }
 
+        #aboutView > div:nth-child(3) > ul > li > h3 > span {
+            color: black;
         }
 
 
@@ -257,13 +267,13 @@
             border-radius: 68px;
             box-sizing: border-box;
             box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
-            background-color: rgba(71, 167, 255, 1);
+            background-color: #eeeeee;
             line-height: 32px;
             font-size: 22px;
             font-weight: bold;
             text-align: center;
             margin-left: 1500px;
-            margin-top: 27px;
+            margin-top: -20px;
             cursor: pointer;
         }
 
@@ -344,22 +354,22 @@
         }
 
 
-    /*    #activitiesView {
-            height: 100vh;
-        }
+        /*    #activitiesView {
+                height: 100vh;
+            }
 
-        #activitiesView > div {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            #activitiesView > div {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-        }
+            }
 
-        #activitiesView > div > h1 {
-            position: relative;
-            font-size: 62px;
-        }*/
+            #activitiesView > div > h1 {
+                position: relative;
+                font-size: 62px;
+            }*/
 
 
         #aboutView > div:nth-child(2) {
@@ -1137,6 +1147,7 @@
             height: 403px;
             border-radius: 75px;
         }
+
         .activity_img {
             background-repeat: no-repeat;
             background-position: 50%;
@@ -1145,7 +1156,7 @@
 
         #activity_img1 {
             background-image: url("assets/project/telesco.jpg");
-        width: 400px;
+            width: 400px;
             position: relative;
 
         }
@@ -1171,26 +1182,29 @@
             font-weight: bold;
             font-family: 'Saira Condensed', sans-serif;
         }
-        #activity_btn{
+
+        #activity_btn {
             position: relative;
             top: 18%;
             right: 111px;
-            left: -173px;
+            left: -89px;
             margin: auto;
             width: 100px;
         }
+
         .see_more_btn:hover {
-            color: white;
+            color: blue;
         }
+
         .see_more_btn {
-            width: 443px;
+            width: 264px;
             height: 72px;
             border: 5px solid #2ae7d0;
             background-color: #1ee5ce;
             border-radius: 68px;
             box-sizing: border-box;
             box-shadow: 0px 4px 10px 5px rgb(0 0 0 / 25%);
-            color: black;
+            color: white;
             line-height: 34px;
             font-size: 35px;
             font-weight: bold;
@@ -1199,8 +1213,61 @@
             font-family: 'Saira Condensed', sans-serif;
         }
 
-
         /*Project section End*/
+        #footer {
+            height: 300px;
+        }
+
+        .footer-wrap {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            bottom: -26px;
+        }
+
+        #pic {
+            width: 150px;
+            height: 150px;
+            border: 5px solid #18e5cd;
+            border-radius: 100%;
+            background-image: url("assets/img/2img.jpg");
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            text-align: center;
+        }
+
+
+        #footer > hr {
+            height: 4px;
+            background-color: black;
+        }
+
+        #footer_p {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 29px;
+            text-align: center;
+            color: black;
+            font-family: 'Saira Condensed', sans-serif;
+        }
+
+        #footer_p > a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #footer_p > a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        /*   footer end*/
 
     </style>
 </head>
@@ -1276,11 +1343,11 @@
             <h2>Personal Information</h2>
             <ul>
                 <li>
-                    <h3>Name: <span>Pasindu Lakshan Kudaligama</span></h3>
-                    <h3>Age: <span>24</span></h3>
-                    <h3>Nationality: <span>Sri Lankan</span></h3>
-                    <h3>Phone Number: <span>+94 702616332</span></h3>
-                    <h3>Email: <span>kudaligamagepasindulakshan@gmail.com</span></h3>
+                    <h3>Name: <span>Pasindu Lakshan Kudaligama.</span></h3>
+                    <h3>Age: <span>24 Years.</span></h3>
+                    <h3>Nationality: <span>Sri Lankan.</span></h3>
+                    <h3>Phone Number: <a href="+94 702616332"><span>+94 702616332</span></a></h3>
+                    <h3>Email: <a href="kudaligamagepasindulakshan@gmail.com"><span>kudaligamagepasindulakshan@gmail.com</span></a></h3>
                 </li>
             </ul>
         </div>
@@ -1289,8 +1356,10 @@
             <button id="cv-btn">
                 <span>Download CV</span>
                 <div>
-                    <svg>
-                        <use xlink:href="#download_icon"></use>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-download" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
                     </svg>
                 </div>
             </button>
@@ -1423,16 +1492,16 @@
         <div id="activity_btn">
             <a href="moreProjects&Assignment.html" target="_blank">
                 <button class="see_more_btn">
-                    Click Here To See More
+                    Click Here
                 </button>
             </a>
         </div>
     </section>
-  <!--  <section id="activitiesView">
-        <div>
-            <h1>ACTIVITIES</h1>
-        </div>
-    </section>-->
+    <!--  <section id="activitiesView">
+          <div>
+              <h1>ACTIVITIES</h1>
+          </div>
+      </section>-->
     <section id="contactsView">
         <div>
             <h1>CONTACTS</h1>
@@ -1512,7 +1581,14 @@
 </main>
 
 <footer>
-
+    <hr>
+    <div class="footer-wrap">
+        <div id="pic">
+        </div>
+        <p id="footer_p"> © 2021. All rights reserved by <a href="https://github.com/pasindulakshankudaligama">Pasindu
+            Lakshan Kudaligama.</a>
+        </p>
+    </div>
 </footer>
 
 </body>
