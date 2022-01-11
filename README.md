@@ -37,10 +37,6 @@ Format: ![Alt Text]("https://www.facebook.com/photo.php?fbid=1316465092140856&se
 
 ![Home Section Img](assets/img/projects.png)
 
-<h3 align="center">Activities</h3>
-
-![Home Section Img](assets/img/activities.png)
-
 <h3 align="center">Contacts</h3>
 
 ![Home Section Img](assets/img/contcts.png)
