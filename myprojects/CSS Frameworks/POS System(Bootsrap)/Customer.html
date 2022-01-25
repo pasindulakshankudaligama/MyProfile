@@ -40,13 +40,13 @@
     
     </header>
 
-    <section class="container">
+    <section class="container-fluid">
         <div class="rounded-3 p-3" style="background-color: #a1ee83; margin-top: 30px;">
             <h1 class="text-center mb-3"><i class="bi bi-people-fill m-2"></i>Customer Form</h1>
         </div>
 
           <div class="row g-3 align-items-center pb-3 justify-content-between">
-                <div class="col-12 col-md-6 col-xl-12">
+                <div class="col-12 col-md-6 col-xl-6">
                     <div class="input-group mb-3" style="height: 10px;">
                         <input type="text" class="form-control" placeholder="Search Customer"
                             aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -54,20 +54,76 @@
                                 class="bi bi-search m-2"></i>Search</button>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 col-lg-4 col-xl-5">
+                <div class="col-12 col-md-5 col-lg-4 col-xl-6">
                     <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" 
                     data-bs-target="#removeCustomer"><i class="bi bi-person-plus-fill m-2"></i>Delete Customer</button>
                     <button type="button" class="btn btn-secondary mt-2"><i class="bi bi-backspace m-2"></i>Clear</button>
                     <button type="button" class="btn btn-success mt-2" data-bs-toggle="modal"
-                        data-bs-target="#addCustomer"><i class="bi bi-person-plus-fill m-2"></i>Add Customer</button>
-                 
-                  
+                        data-bs-target="#addCustomer"><i class="bi bi-person-plus-fill m-2"></i>Add Customer</button>      
                 </div>
             </div>
+
+            <div class="row align-items-center pt-3">
+                <div class="col-12 mt-2">
+                    <div class="table-responsive" style="height: 70vh;">
+                        <table class="table table-primary table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Customer ID</th>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Salary</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">C001</th>
+                                    <td>Pasindu</td>
+                                    <td>Bulathsinhala</td>
+                                    <td>100000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C002</th>
+                                    <td>Lakshan</td>
+                                    <td>Horana</td>
+                                    <td>30000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C003</th>
+                                    <td>Piushan</td>
+                                    <td>Panadura</td>
+                                    <td>200000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C004</th>
+                                    <td>Lakmal</td>
+                                    <td>Warakapola</td>
+                                    <td>300000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C005</th>
+                                    <td>Kusal</td>
+                                    <td>Warakapola</td>
+                                    <td>200000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C006</th>
+                                    <td>Helitha</td>
+                                    <td>Nawalapitiya</td>
+                                    <td>300000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             
        
     </section>
+<footer class="container-fluid">
+<div>
 
+</div>
+</footer>
 
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
