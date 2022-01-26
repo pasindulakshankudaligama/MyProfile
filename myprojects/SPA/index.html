@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <title>POS System - Customer Form</title>
+    <title>SPA POS System - Customer Form</title>
 
 </head>
 
@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6a6b6e;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="Customer.html">
+                <a id="customer-clicks" class="navbar-brand">
                     <img src="assets//img/logo.png" alt="Logo" width="184.3125" height="48.1875">
                 </a>
                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -25,13 +25,13 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="Customer.html">Customer</a>
+                            <a id="customer-click" class="nav-link active" >Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="Item.html">Item</a>
+                            <a id="item-click" class="nav-link" aria-current="page">Item</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Order.html">Order</a>
+                            <a id="order-click" class="nav-link">Order</a>
                         </li>
                     </ul>
                 </div>
@@ -40,7 +40,8 @@
     
     </header>
 
-    <section class="container-fluid">
+    <section id="customer" class="container-fluid">
+        
         <div class="rounded-3 p-3" style="background-color: #a6b9eb; margin-top: 30px;">
             <h1 class="text-center mb-3"><i class="bi bi-people-fill m-2"></i>Customer Form</h1>
         </div>
@@ -179,7 +180,7 @@
             
        
     </section>
-      <section class="container-fluid">
+      <section id="item" class="container-fluid">
         <div class="rounded-3 p-3" style="background-color: #a6b9eb; margin-top: 30px;">
             <h1 class="text-center mb-3"><i class="bi bi-box-seam m-2"></i>Item Form</h1>
         </div>
@@ -195,10 +196,10 @@
             </div>
             <div class="col-12 col-md-5 col-lg-4 col-xl-6">
                 <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" 
-                data-bs-target="#removeCustomer"><i class="bi bi-bag-plus m-2"></i>Delete Item</button>
+                data-bs-target="#removeItem"><i class="bi bi-bag-plus m-2"></i>Delete Item</button>
                 <button type="button" class="btn btn-secondary mt-2"><i class="bi bi-backspace m-2"></i>Clear</button>
                 <button type="button" class="btn btn-success mt-2" data-bs-toggle="modal"
-                    data-bs-target="#addCustomer"><i class="bi bi-bag-plus m-2"></i>Add Item</button>      
+                    data-bs-target="#addItem"><i class="bi bi-bag-plus m-2"></i>Add Item</button>      
             </div>
         </div>
         <div class="row align-items-center pt-3">
@@ -310,7 +311,7 @@
             </div>
 
     </section>
-     <section class="container-fluid">
+     <section id="order" class="container-fluid">
         <div class="row align-items-center">
             <div class="col-12 col-lg-4">
                  <div class="modal-dialog">
@@ -508,5 +509,5 @@
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-
+    <script src="assets/js/script.js"></script>
 </body>
