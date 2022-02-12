@@ -93,67 +93,10 @@
                                     <th>Salary</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">C001</th>
-                                    <td>Pasindu</td>
-                                    <td>Bulathsinhala</td>
-                                    <td>100000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">C002</th>
-                                    <td>Lakshan</td>
-                                    <td>Horana</td>
-                                    <td>30000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">C003</th>
-                                    <td>Piushan</td>
-                                    <td>Panadura</td>
-                                    <td>200000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">C004</th>
-                                    <td>Lakmal</td>
-                                    <td>Warakapola</td>
-                                    <td>300000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">C005</th>
-                                    <td>Kusal</td>
-                                    <td>Warakapola</td>
-                                    <td>200000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">C006</th>
-                                    <td>Helitha</td>
-                                    <td>Nawalapitiya</td>
-                                    <td>300000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">C007</th>
-                                    <td>Pasindu</td>
-                                    <td>Bulathsinhala</td>
-                                    <td>100000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">C008</th>
-                                    <td>Lakshan</td>
-                                    <td>Horana</td>
-                                    <td>30000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">C009</th>
-                                    <td>Piushan</td>
-                                    <td>Panadura</td>
-                                    <td>200000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">C010</th>
-                                    <td>Lakmal</td>
-                                    <td>Warakapola</td>
-                                    <td>300000</td>
-                                </tr>
+                            <tbody id="customerTB">
+                               
+                           
+                             
                                 
                             </tbody>
                         </table>
@@ -167,16 +110,23 @@
 
 </div>
 </footer>
+
     <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
     <script>
     $("#btnSave").click(function(){
-        $("#txtCusID").val();
-        $("#txtCusName").val();
-        $("#txtCusAddress").val();
-        $("#txtCusTP").val();
+        let customerID = $("#txtCusID").val();
+        let customerName = $("#txtCusName").val();
+        let customerAddress = $("#txtCusAddress").val();
+        let customerTelephone = $("#txtCusTP").val();
+
+
+    let row = `<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerTelephone}</td></tr>`;
+    
+    $("#customerTB").append(row);
+
     });
     </script>
 
