@@ -1,8 +1,8 @@
 
 // Validations
-const itemIDRegEx = /^(C00-)[0-9]{1,3}$/;
+const itemIDRegEx = /^(I00-)[0-9]{1,3}$/;
 const itemNameRegEx = /^[A-z ]{5,20}$/;
-const itemQTYRegEx = /^[0-9/A-z. ,]{7,}$/;
+const itemQTYRegEx = /^[0-9]{1,10}$/;
 const unitPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 

@@ -134,46 +134,46 @@ function clearAll() {
     $('#txtCusID').focus();
     $("#btnSave").attr('disabled', true);
     loadAllCustomers();
-    $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");
+    $("#txtCusID,#txtCusName,#txtCusAddress,#txtCusSalary").text("");
 }
 
 function formValid() {
     var cusID = $("#txtCusID").val();
     $("#txtCusID").css('border', '2px solid green');
-    $("#lblcusid").text("");
+    $("#txtCusID").text("");
     if (cusIDRegEx.test(cusID)) {
         var cusName = $("#txtCusName").val();
         if (cusNameRegEx.test(cusName)) {
             $("#txtCusName").css('border', '2px solid green');
-            $("#lblcusname").text("");
+            $("#txtCusName").text("");
             var cusAddress = $("#txtCusAddress").val();
             if (cusAddressRegEx.test(cusAddress)) {
                 var cusSalary = $("#txtCusSalary").val();
                 var resp = cusSalaryRegEx.test(cusSalary);
                 $("#txtCusAddress").css('border', '2px solid green');
-                $("#lblcusaddress").text("");
+                $("#txtCusAddress").text("");
                 if (resp) {
                     $("#txtCusSalary").css('border', '2px solid green');
-                    $("#lblcussalary").text("");
+                    $("#txtCusSalary").text("");
                     return true;
                 } else {
                     $("#txtCusSalary").css('border', '2px solid red');
-                    $("#lblcussalary").text("Cus Salary is a required field : Pattern 100.00 or 100");
+                    $("#txtCusSalary").text("Cus Salary is a required field : Pattern 100.00 or 100");
                     return false;
                 }
             } else {
                 $("#txtCusAddress").css('border', '2px solid red');
-                $("#lblcusaddress").text("Cus Name is a required field : Mimum 7");
+                $("#txtCusAddress").text("Cus Name is a required field : Mimum 7");
                 return false;
             }
         } else {
             $("#txtCusName").css('border', '2px solid red');
-            $("#lblcusname").text("Cus Name is a required field : Mimimum 5, Max 20, Spaces Allowed");
+            $("#txtCusName").text("Cus Name is a required field : Mimimum 5, Max 20, Spaces Allowed");
             return false;
         }
     } else {
         $("#txtCusID").css('border', '2px solid red');
-        $("#lblcusid").text("Cus ID is a required field : Pattern C00-000");
+        $("#txtCusID").text("Cus ID is a required field : Pattern C00-000");
         return false;
     }
 }
