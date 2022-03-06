@@ -1,4 +1,67 @@
 //crud
+$("#btnSave").click(function(){
+    saveItem();
+    clearAll();
+    loadAllItems();
+}); 
+
+$("#button-addon2").click(function () {
+    var searchID = $("#txtSearchItemCode").val();
+
+    var response = searchItem(searchitemCode);
+    if (response) {
+        $("#txtItemCode").val(response.itemCode);
+        $("#txtItemName").val(response.itemName);
+        $("#txtItemQTY").val(response.itemQTY);
+        $("#txtUnitPrice").val(response.unitPrice);
+    }else{
+        clearAll();
+        alert("No Such a item");
+    }
+});
+
+function loadAllItems() {
+    $("#itemTB").empty();
+    for (var i of itemDB) {
+        let row = `<tr><td>${i.itemCode}</td><td>${i.itemName}</td><td>${i.itemQTY}</td><td>${i.unitPrice}</td></tr>`;
+        $("#itemTB").append(row);
+    }
+}
+
+
+
+function saveItem(){
+let itemCode = $("#txtItemCode").val();
+    let itemName = $("#txtItemName").val();
+    let itemQTY = $("#txtItemQTY").val();
+    let unitPrice = $("#txtUnitPrice").val();
+
+    //create Object
+    var itemObject = {
+        code: itemCode,
+        name: itemName,
+        qTY: itemQTY,
+        unitPrice: unitPrice
+    };
+
+    itemDB.push(itemObject);
+}
+
+function searchCustomer(id) {
+    for (let i = 0; i < itemDB.length; i++) {
+        if (itemDB[i].id == id) {
+            return itemDB[i];
+        }
+    }
+}
+
+function deleteCustomer(){
+   
+}
+
+function updateCustomer(){
+    
+}
 
 
 
@@ -94,22 +157,22 @@ function formValid() {
                     return true;
                 } else {
                     $("#txtUnitPrice").css('border', '2px solid red');
-                    $("#txtUnitPrice").text("Cus Salary is a required field : Pattern 100.00 or 100");
+                    $("#txtUnitPrice").text("unit price is a required field : Pattern 100.00 or 100");
                     return false;
                 }
             } else {
                 $("#txtItemQTY").css('border', '2px solid red');
-                $("#txtItemQTY").text("Cus Name is a required field : Mimum 7");
+                $("#txtItemQTY").text("Item Name is a required field : Mimum 7");
                 return false;
             }
         } else {
             $("#txtItemName").css('border', '2px solid red');
-            $("#txtItemName").text("Cus Name is a required field : Mimimum 5, Max 20, Spaces Allowed");
+            $("#txtItemName").text("Item Name is a required field : Mimimum 5, Max 20, Spaces Allowed");
             return false;
         }
     } else {
         $("#txtItemCode").css('border', '2px solid red');
-        $("#txtItemCode").text("Cus ID is a required field : Pattern C00-000");
+        $("#txtItemCode").text("Item Code is a required field : Pattern I00-000");
         return false;
     }
 }
