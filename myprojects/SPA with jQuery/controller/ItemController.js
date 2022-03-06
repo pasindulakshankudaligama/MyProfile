@@ -1,3 +1,9 @@
+//crud
+
+
+
+
+
 
 // Validations
 const itemIDRegEx = /^(I00-)[0-9]{1,3}$/;
@@ -25,11 +31,11 @@ $("#txtItemCode").on('keyup', function (eventOb) {
 
     if (eventOb.key == "Control") {
         var typedCustomerID = $("#txtItemCode").val();
-        var srcCustomer = searchCustomerFromID(typedCustomerID);
-        $("#txtItemCode").val(srcCustomer.getCustomerID());
-        $("#txtItemName").val(srcCustomer.getCustomerName());
-        $("#txtItemQTY").val(srcCustomer.getCustomerAddress());
-        $("#txtUnitPrice").val(srcCustomer.getCustomerSalary());
+        var srcCustomer = searchItemFromCode(typedItemCode);
+        $("#txtItemCode").val(srcItem.getItemCode());
+        $("#txtItemName").val(srcItem.getItemName());
+        $("#txtItemQTY").val(srcItem.getItemQTY());
+        $("#txtUnitPrice").val(srcItem.getUnitPrice());
     }
 
 
@@ -68,18 +74,18 @@ function clearAll() {
 }
 
 function formValid() {
-    var cusID = $("#txtItemCode").val();
+    var itemCode = $("#txtItemCode").val();
     $("#txtItemCode").css('border', '2px solid green');
     $("#txtItemCode").text("");
-    if (cusIDRegEx.test(cusID)) {
-        var cusName = $("#txtItemName").val();
-        if (cusNameRegEx.test(cusName)) {
+    if (itemIDRegEx.test(itemCode)) {
+        var itemName = $("#txtItemName").val();
+        if (itemNameRegEx.test(itemName)) {
             $("#txtItemName").css('border', '2px solid green');
             $("#txtItemName").text("");
-            var cusAddress = $("#txtItemQTY").val();
-            if (cusAddressRegEx.test(cusAddress)) {
-                var cusSalary = $("#txtUnitPrice").val();
-                var resp = cusSalaryRegEx.test(cusSalary);
+            var itemQTY = $("#txtItemQTY").val();
+            if (itemQTYRegEx.test(cusAddress)) {
+                var unitPrice = $("#txtUnitPrice").val();
+                var resp = unitPriceRegEx.test(unitPrice);
                 $("#txtItemQTY").css('border', '2px solid green');
                 $("#txtItemQTY").text("");
                 if (resp) {
@@ -109,17 +115,17 @@ function formValid() {
 }
 
 function checkIfValid() {
-    var cusID = $("#txtItemCode").val();
-    if (cusIDRegEx.test(cusID)) {
+    var itemCode = $("#txtItemCode").val();
+    if (itemCodeRegEx.test(cusID)) {
         $("#txtItemName").focus();
-        var cusName = $("#txtItemName").val();
-        if (cusNameRegEx.test(cusName)) {
+        var itemName = $("#txtItemName").val();
+        if (itemNameRegEx.test(itemName)) {
             $("#txtItemQTY").focus();
-            var cusAddress = $("#txtItemQTY").val();
-            if (cusAddressRegEx.test(cusAddress)) {
+            var itemQTY = $("#txtItemQTY").val();
+            if (itemQTYRegEx.test(itemQTY)) {
                 $("#txtUnitPrice").focus();
-                var cusSalary = $("#txtUnitPrice").val();
-                var resp = cusSalaryRegEx.test(cusSalary);
+                var unitPrice = $("#txtUnitPrice").val();
+                var resp = unitPriceRegEx.test(unitPrice);
                 if (resp) {
                     let res = confirm("Do you really need to add this Item..?");
                     if (res) {
