@@ -1,14 +1,14 @@
 //crud
-$("#btnSave").click(function(){
+$("#btnItemSave").click(function(){
     saveItem();
     clearAll();
     loadAllItems();
 }); 
 
-$("#button-addon2").click(function () {
-    var searchID = $("#txtSearchItemCode").val();
+$("#btnItemSearch").click(function () {
+    var searchItemCode = $("#txtSearchItemCode").val();
 
-    var response = searchItem(searchitemCode);
+    var response = searchItem(searchItemCode);
     if (response) {
         $("#txtItemCode").val(response.itemCode);
         $("#txtItemName").val(response.itemName);
@@ -21,10 +21,10 @@ $("#button-addon2").click(function () {
 });
 
 function loadAllItems() {
-    $("#itemTB").empty();
+    $("#ItemTB").empty();
     for (var i of itemDB) {
         let row = `<tr><td>${i.itemCode}</td><td>${i.itemName}</td><td>${i.itemQTY}</td><td>${i.unitPrice}</td></tr>`;
-        $("#itemTB").append(row);
+        $("#ItemTB").append(row);
     }
 }
 

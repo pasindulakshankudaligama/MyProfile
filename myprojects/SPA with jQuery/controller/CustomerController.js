@@ -1,12 +1,33 @@
-
 // CRUD Operations
-$("#btnSave").click(function(){
+$("#btnSave").click(function () {
     saveCustomer();
     clearAll();
     loadAllCustomers();
-}); 
+});
 
-$("#button-addon2").click(function () {
+function loadAllCustomers() {
+    $("#CustomerTB").empty();
+    for (var i of customerDB) {
+        let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
+        $("#CustomerTB").append(row);
+    }
+}
+
+function saveCustomer() {
+    let customerID = $("#txtCusID").val();
+    let customerName = $("#txtCusName").val();
+    let customerAddress = $("#txtCusAddress").val();
+    let customerSalary = $("#txtCusSalary").val();
+
+    //create Object
+    var customerObject = {
+        id: customerID, name: customerName, address: customerAddress, salary: customerSalary
+    };
+
+    customerDB.push(customerObject);
+}
+
+$("#btnSearch").click(function () {
     var searchID = $("#txtSearchCusID").val();
 
     var response = searchCustomer(searchID);
@@ -15,38 +36,11 @@ $("#button-addon2").click(function () {
         $("#txtCusName").val(response.name);
         $("#txtCusAddress").val(response.address);
         $("#txtCusSalary").val(response.salary);
-    }else{
+    } else {
         clearAll();
         alert("No Such a Customer");
     }
 });
-
-function loadAllCustomers() {
-    $("#customerTB").empty();
-    for (var i of customerDB) {
-        let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
-        $("#customerTB").append(row);
-    }
-}
-
-
-
-function saveCustomer(){
-let customerID = $("#txtCusID").val();
-    let customerName = $("#txtCusName").val();
-    let customerAddress = $("#txtCusAddress").val();
-    let customerSalary = $("#txtCusSalary").val();
-
-    //create Object
-    var customerObject = {
-        id: customerID,
-        name: customerName,
-        address: customerAddress,
-        salary: customerSalary
-    };
-
-    customerDB.push(customerObject);
-}
 
 function searchCustomer(id) {
     for (let i = 0; i < customerDB.length; i++) {
@@ -56,20 +50,17 @@ function searchCustomer(id) {
     }
 }
 
-function deleteCustomer(){
-   
+function deleteCustomer() {
+
 }
 
-function updateCustomer(){
-    
+function updateCustomer() {
+
 }
-
-
-
-
 
 
 // Validations
+/*
 const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
 const cusNameRegEx = /^[A-z ]{5,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
@@ -222,3 +213,4 @@ function setButton() {
 $('#btnSave').click(function () {
     checkIfValid();
 });
+*/
