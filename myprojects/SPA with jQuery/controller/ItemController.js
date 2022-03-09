@@ -74,6 +74,10 @@ function deleteItem (){
 
     });
 }
+/*_________clear button___________*/
+$("#btnItemClear").click(function (){
+    clearAll();
+});
 
 
 function loadAllItems() {
@@ -110,19 +114,6 @@ function searchItem(id) {
         }
     }
 }
-
-function deleteCustomer(){
-   
-}
-
-function updateCustomer(){
-    
-}
-
-
-
-
-
 
 // Validations
 const itemIDRegEx = /^(I00-)[0-9]{1,3}$/;
