@@ -17,7 +17,7 @@ function saveCustomer() {
   /*  var customerObject = {
         id: customerID, name: customerName, address: customerAddress, salary: customerSalary
     };*/
-    var customerObject = new Customer(id,name,address,salary);
+    var customerObject = new Customer(customerID,customerName,customerAddress,customerSalary);
 
     customerDB.push(customerObject);
 

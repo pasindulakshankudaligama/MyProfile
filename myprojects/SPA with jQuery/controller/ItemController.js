@@ -3,7 +3,62 @@ $("#btnItemSave").click(function(){
     saveItem();
     clearAll();
     loadAllItems();
-}); 
+});
+
+
+function saveItem(){
+    let itemCode = $("#txtItemCode").val();
+    let itemName = $("#txtItemName").val();
+    let itemQTY = $("#txtItemQTY").val();
+    let unitPrice = $("#txtUnitPrice").val();
+
+    //create Object
+   /* var itemObject = {
+        code: itemCode,
+        name: itemName,
+        qTY: itemQTY,
+        unitPrice: unitPrice
+    };
+*/
+    var itemObject = Item(itemCode,itemName,itemQTY,unitPrice);
+    itemDB.push(itemObject);
+}
+
+function bindItem (){
+    /*_________click Item Table ___________*/
+    $("#ItemTB > tr").click(function (){
+        let itemId = $(this).children(":eq(0)").text();
+        let itemName = $(this).children(":eq(1)").text();
+        let itemQty = $(this).children(":eq(2)").text();
+        let unitPrice = $(this).children(":eq(3)").text();
+
+        /*_________set data for text fields__________*/
+        $("#txtItemCode").val(itemId);
+        $("#txtItemName").val(itemName);
+        $("#txtItemQTY").val(itemQty);
+        $("#txtUnitPrice").val(unitPrice);
+
+    });
+
+};
+
+/*_________Update Customer___________*/
+$("#btnItemUpdate").click(function (){
+    let itemId = $("#txtItemCode").val();
+    let itemName = $("#txtItemName").val();
+    let itemQty = $("#txtItemQTY").val();
+    let itemPrice = $("#txtUnitPrice").val();
+
+    for (var i=0;i<itemDB.length;i++){
+        if ( itemDB[i].getItemCode()==itemId){
+            itemDB[i].setItemName(itemName);
+            itemDB[i].setItemQTY(itemQty);
+            itemDB[i].setUnitPrice(itemPrice);
+        }
+    }
+    loadTableItemData();
+    clearAll();
+});
 
 $("#btnItemSearch").click(function () {
     var searchItemCode = $("#txtSearchItemCode").val();
@@ -30,22 +85,6 @@ function loadAllItems() {
 
 
 
-function saveItem(){
-let itemCode = $("#txtItemCode").val();
-    let itemName = $("#txtItemName").val();
-    let itemQTY = $("#txtItemQTY").val();
-    let unitPrice = $("#txtUnitPrice").val();
-
-    //create Object
-    var itemObject = {
-        code: itemCode,
-        name: itemName,
-        qTY: itemQTY,
-        unitPrice: unitPrice
-    };
-
-    itemDB.push(itemObject);
-}
 
 function searchCustomer(id) {
     for (let i = 0; i < itemDB.length; i++) {
