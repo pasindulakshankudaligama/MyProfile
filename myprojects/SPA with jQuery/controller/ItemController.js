@@ -56,9 +56,36 @@ $("#btnItemUpdate").click(function (){
             itemDB[i].setUnitPrice(itemPrice);
         }
     }
-    loadTableItemData();
+    loadAllItems();
     clearAll();
 });
+
+/*_________Delete Item___________*/
+function deleteItem (){
+    $("#btnItemDelete").click(function (){
+        let getClickItemData=$("#txtItemCode").val();
+        for (let i=0;i<itemDB.length;i++){
+            if (itemDB[i].getItemCode()==getClickItemData){
+                itemDB.splice(i, 1);
+            }
+        }
+        clearAll();
+        loadAllItems();
+
+    });
+}
+
+
+function loadAllItems() {
+    $("#ItemTB").empty();
+    for (var i of itemDB) {
+        let row = `<tr><td>${i.getItemCode()}</td><td>${i.getItemName()}</td><td>${i.getItemQTY()}</td><td>${i.getUnitPrice()}</td></tr>`;
+        $("#ItemTB").append(row);
+
+        bindItem();
+        deleteItem();
+    }
+}
 
 $("#btnItemSearch").click(function () {
     var searchItemCode = $("#txtSearchItemCode").val();
@@ -75,18 +102,8 @@ $("#btnItemSearch").click(function () {
     }
 });
 
-function loadAllItems() {
-    $("#ItemTB").empty();
-    for (var i of itemDB) {
-        let row = `<tr><td>${i.itemCode}</td><td>${i.itemName}</td><td>${i.itemQTY}</td><td>${i.unitPrice}</td></tr>`;
-        $("#ItemTB").append(row);
-    }
-}
 
-
-
-
-function searchCustomer(id) {
+function searchItem(id) {
     for (let i = 0; i < itemDB.length; i++) {
         if (itemDB[i].id == id) {
             return itemDB[i];
