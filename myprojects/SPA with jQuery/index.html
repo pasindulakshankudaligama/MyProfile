@@ -192,8 +192,8 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col">
-                                <label class="form-label fw-bold" for="OID"> Order ID:</label>
-                                <input class="form-control" id="OID" placeholder="O001" type="text">
+                                <label id="lblOrderId" class="form-label fw-bold" for="OID"> Order ID:</label>
+                                <input id="txtOrderId" class="form-control" id="OID" placeholder="O001" type="text">
                             </div>
                             <div class="col">
                                 <label class="form-label fw-bold" for="Date">Date:</label>
@@ -355,14 +355,15 @@
     </div>
 </footer>
 
+
 <script crossorigin="anonymous"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         src="assets/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="db/DB.js"></script>
 <script src="controller/CustomerController.js"></script>
 <script src="controller/ItemController.js"></script>
 <script src="controller/OrderController.js "></script>
-<script src="db/DB.js"></script>
 <script src="model/Customer.js"></script>
 <script src="model/Item.js"></script>
 <script src="model/Orders.js"></script>
