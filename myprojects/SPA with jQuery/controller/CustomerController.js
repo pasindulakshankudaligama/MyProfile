@@ -5,13 +5,7 @@ $("#btnSave").click(function () {
     loadAllCustomers();
 });
 
-function loadAllCustomers() {
-    $("#CustomerTB").empty();
-    for (var i of customerDB) {
-        let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
-        $("#CustomerTB").append(row);
-    }
-}
+
 
 function saveCustomer() {
     let customerID = $("#txtCusID").val();
@@ -20,22 +14,82 @@ function saveCustomer() {
     let customerSalary = $("#txtCusSalary").val();
 
     //create Object
-    var customerObject = {
+  /*  var customerObject = {
         id: customerID, name: customerName, address: customerAddress, salary: customerSalary
-    };
+    };*/
+    var customerObject = new Customer(id,name,address,salary);
 
     customerDB.push(customerObject);
+
 }
+$("#btnUpdate").click(function (){
+    let customerID = $("#txtCusID").val();
+    let customerName = $("#txtCusName").val();
+    let customerAddress = $("#txtCusAddress").val();
+    let customerSalary = $("#txtCusSalary").val();
+    for(var i=0; i<customerDB.length;i++){
+        if (customerDB[i].getCustomerId()==customerID) {
+            customerDB[i].setCustomerName(customerName);
+            customerDB[i].setCustomerAddress(customerAddress);
+            customerDB[i].setCustomerSalary(customerSalary);
+        }
+
+    }
+    loadAllCustomers();
+});
+
+function deleteCustomer (){
+    $("#btnDelete").click(function (){
+        let getClickData=$("#txtCusID").val();
+        for (let i=0;i<customerDB.length;i++){
+            if (customerDB[i].getCustomerId()==getClickData){
+                customerDB.splice(i, 1);
+            }
+        }
+        clearAll();
+        loadAllCustomers();
+
+    });
+}
+/*_________click customer Table ___________*/
+function bindCustomer (){
+    $("#customerTB > tr").click(function (){
+        let customerId = $(this).children(":eq(0)").text();
+        let customerName = $(this).children(":eq(1)").text();
+        let customerAddress = $(this).children(":eq(2)").text();
+        let customerSalary = $(this).children(":eq(3)").text();
+
+        /*_________set data for text fields__________*/
+        $("#txtCusID").val(customerId);
+        $("#txtCusName").val(customerName);
+        $("#txtCusAddress").val(customerAddress);
+        $("#txtCusSalary").val(customerSalary);
+
+    });
+}
+
+function loadAllCustomers() {
+    $("#CustomerTB").empty();
+    for (var i of customerDB) {
+        let row = `<tr><td>${i.getCustomerId()}</td><td>${i.getCustomerName()}</td><td>${i.getCustomerAddress()}</td><td>${i.getCustomerSalary()}</td></tr>`;
+        $("#CustomerTB").append(row);
+
+        bindCustomer();
+        deleteCustomer();
+
+    }
+}
+
 
 $("#btnSearch").click(function () {
     var searchID = $("#txtSearchCusID").val();
 
     var response = searchCustomer(searchID);
     if (response) {
-        $("#txtCusID").val(response.id);
-        $("#txtCusName").val(response.name);
-        $("#txtCusAddress").val(response.address);
-        $("#txtCusSalary").val(response.salary);
+        $("#txtCusID").val(response.getCustomerId());
+        $("#txtCusName").val(response.getCustomerName());
+        $("#txtCusAddress").val(response.getCustomerAddress());
+        $("#txtCusSalary").val(response.getCustomerSalary());
     } else {
         clearAll();
         alert("No Such a Customer");
@@ -44,23 +98,18 @@ $("#btnSearch").click(function () {
 
 function searchCustomer(id) {
     for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].id == id) {
+        if (customerDB[i].getCustomerId() == id) {
             return customerDB[i];
         }
     }
 }
 
-function deleteCustomer() {
 
-}
 
-function updateCustomer() {
 
-}
 
 
 // Validations
-/*
 const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
 const cusNameRegEx = /^[A-z ]{5,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
@@ -213,4 +262,3 @@ function setButton() {
 $('#btnSave').click(function () {
     checkIfValid();
 });
-*/

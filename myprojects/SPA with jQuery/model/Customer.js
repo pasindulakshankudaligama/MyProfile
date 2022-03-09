@@ -1,4 +1,4 @@
-function Customer(id, name, address, telNo) {
+function Customer(id, name, address, salary) {
     var __id = id;
     var __name = name;
     var __address = address;
@@ -25,7 +25,7 @@ function Customer(id, name, address, telNo) {
     this.setCustomerSalary = function (salary) {
         __salary = salary;
     }
-    this.getCustomerTelNo = function () {
+    this.getCustomerSalary = function () {
         return __salary;
     }
 }
