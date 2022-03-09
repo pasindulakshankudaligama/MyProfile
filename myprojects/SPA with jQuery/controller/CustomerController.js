@@ -51,6 +51,13 @@ function deleteCustomer (){
 
     });
 }
+
+/*_________clear button___________*/
+$("#btnClear").click(function (){
+    clearAll();
+});
+
+
 /*_________click customer Table ___________*/
 function bindCustomer (){
     $("#customerTB > tr").click(function (){
