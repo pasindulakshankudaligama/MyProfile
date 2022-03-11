@@ -1,5 +1,14 @@
 generateOrderId();
 setDate();
+disableEdit();
+
+function disableEdit() {
+    $("#OID,#cusName,#salary,#address,#iDate").css("pointer-events", "none");
+    $("#itemName,#qtyOnHand,#price").css("pointer-events", "none");
+    $("#balance").css("pointer-events", "none");
+}
+
+
 
 function generateOrderId() {
     let index = orderDB.length - 1;
