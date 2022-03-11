@@ -1,11 +1,15 @@
+
+
+
+
 // CRUD Operations
 generateId();
 
 $("#btnSave").click(function () {
-    generateId();
     saveCustomer();
     clearAll();
     loadAllCustomers();
+    generateId();
 
 });
 
@@ -39,6 +43,7 @@ $("#btnUpdate").click(function () {
         }
 
     }
+    generateId();
     loadAllCustomers();
 });
 
@@ -50,6 +55,7 @@ function deleteCustomer() {
                 customerDB.splice(i, 1);
             }
         }
+        generateId();
         clearAll();
         loadAllCustomers();
 

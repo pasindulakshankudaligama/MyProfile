@@ -3,10 +3,10 @@
 generateItemId();
 
 $("#btnItemSave").click(function () {
-    generateItemId()
     saveItem();
     loadAllItems();
     clearAll();
+    generateItemId();
 });
 
 
@@ -45,6 +45,7 @@ $("#btnItemUpdate").click(function () {
     }
     loadAllItems();
     clearAll();
+    generateItemId();
 });
 
 /*_________Delete Item___________*/
@@ -58,6 +59,7 @@ function deleteItem() {
         }
         loadAllItems();
         clearAll();
+        generateItemId();
 
     });
 }
