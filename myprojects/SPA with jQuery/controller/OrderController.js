@@ -8,6 +8,11 @@ $("#cmb").change(function(e){
 
 });
 
+$("#idCmb").change(function(){
+    selectedItemId = $('#idCmb').find(":selected").text();
+    selectedItem(selectedItemId);
+});
+
 /* Load Customer ID's to Combo Box - Function */
 function loadAllCustomerIds() {
     $("#cmb").empty();
@@ -22,6 +27,19 @@ function loadAllCustomerIds() {
 
 }
 
+/* Load Item ID's to Combo Box - Function */
+function loadAllItemCodes() {
+    $("#idCmb").empty();
+
+    let itemHint = `<option disabled selected>Select Item ID</option>`;
+    $("#idCmb").append(itemHint);
+
+    for (let i in itemDB) {
+        let option = `<option value="${itemDB[i].getItemCode()}">${itemDB[i].getItemCode()}</option>`;
+        $("#idCmb").append(option);
+    }
+}
+
 function selectedCustomer(CustomerId) {
     for (const i in customerDB) {
         if (customerDB[i].getCustomerId()==CustomerId) {
@@ -33,6 +51,17 @@ function selectedCustomer(CustomerId) {
     }
 }
 
+/* Load Item Data To input Fields */
+function selectedItem(ItemId) {
+    for (const i in itemDB) {
+        if (itemDB[i].getItemCode()==ItemId) {
+            let element = itemDB[i];
+            $("#itemName").val(element.getItemName());
+            $("#qtyOnHand").val(element.getItemQTY());
+            $("#price").val(element.getUnitPrice());
+        }
+    }
+}
 
 function disableEdit() {
     $("#OID,#cusName,#salary,#address,#iDate").css("pointer-events", "none");
@@ -64,7 +93,6 @@ function generateOrderId() {
 function setDate() {
     let d = new Date();
     let dd = d.toISOString().split("T")[0].split("-");
-    // console.log(dd);
     $("#iDate").val(dd[0]+"-"+dd[1]+"-"+dd[2]);
     $("#hDate").text(dd[0]+"-"+dd[1]+"-"+dd[2]);
 }
