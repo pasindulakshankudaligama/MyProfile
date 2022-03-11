@@ -1,4 +1,5 @@
-
+generateOrderId();
+setDate();
 
 function generateOrderId() {
     let index = orderDB.length - 1;
@@ -19,4 +20,13 @@ function generateOrderId() {
     } else {
         $("#txtOrderId").val("O00-" + temp);
     }
+}
+
+
+function setDate() {
+    let d = new Date();
+    let dd = d.toISOString().split("T")[0].split("-");
+    // console.log(dd);
+    $("#iDate").val(dd[0]+"-"+dd[1]+"-"+dd[2]);
+    $("#hDate").text(dd[0]+"-"+dd[1]+"-"+dd[2]);
 }
