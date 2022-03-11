@@ -2,13 +2,43 @@ generateOrderId();
 setDate();
 disableEdit();
 
+$("#cmb").change(function(e){
+    let selectedCus = $('#cmb').find(":selected").text();
+    selectedCustomer(selectedCus);
+
+});
+
+/* Load Customer ID's to Combo Box - Function */
+function loadAllCustomerIds() {
+    $("#cmb").empty();
+
+    let cusHint = `<option selected>Select Customer ID</option>`;
+    $("#cmb").append(cusHint);
+
+    for (let i in customerDB) {
+        let option = `<option value="${customerDB[i].getCustomerId()}">${customerDB[i].getCustomerId()}</option>`;
+        $("#cmb").append(option);
+    }
+
+}
+
+function selectedCustomer(CustomerId) {
+    for (const i in customerDB) {
+        if (customerDB[i].getCustomerId()==CustomerId) {
+            let element = customerDB[i];
+            $("#cusName").val(element.getCustomerName());
+            $("#salary").val(element.getCustomerSalary());
+            $("#address").val(element.getCustomerAddress());
+        }
+    }
+}
+
+
 function disableEdit() {
     $("#OID,#cusName,#salary,#address,#iDate").css("pointer-events", "none");
     $("#itemName,#qtyOnHand,#price").css("pointer-events", "none");
     $("#balance").css("pointer-events", "none");
 }
-
-
 
 function generateOrderId() {
     let index = orderDB.length - 1;
@@ -30,7 +60,6 @@ function generateOrderId() {
         $("#txtOrderId").val("O00-" + temp);
     }
 }
-
 
 function setDate() {
     let d = new Date();
