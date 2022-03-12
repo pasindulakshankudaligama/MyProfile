@@ -40,6 +40,17 @@ function loadAllItemCodes() {
     }
 }
 
+//add to cart
+/*
+$('#addBtn').click(function () {
+    checkOrderQtyAndAddToCart();
+    disableEdit();
+});
+
+*/
+
+
+
 function selectedCustomer(CustomerId) {
     for (const i in customerDB) {
         if (customerDB[i].getCustomerId()==CustomerId) {
@@ -62,6 +73,7 @@ function selectedItem(ItemId) {
         }
     }
 }
+
 
 function disableEdit() {
     $("#OID,#cusName,#salary,#address,#iDate").css("pointer-events", "none");

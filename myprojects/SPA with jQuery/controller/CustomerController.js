@@ -10,6 +10,7 @@ $("#btnSave").click(function () {
     clearAll();
     loadAllCustomers();
     generateId();
+    loadAllCustomerIds();
 
 });
 

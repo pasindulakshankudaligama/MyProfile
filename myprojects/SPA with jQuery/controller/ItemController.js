@@ -7,6 +7,7 @@ $("#btnItemSave").click(function () {
     loadAllItems();
     clearAll();
     generateItemId();
+    loadAllItemCodes();
 });
 
 
