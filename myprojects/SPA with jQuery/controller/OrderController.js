@@ -5,6 +5,12 @@ generateOrderId();
 setDate();
 disableEdit();
 
+//add to cart
+$("#addBtn").click(function(){
+    addItemToCart();
+});
+
+
 $("#cmb").change(function(e){
     selectedCustomerId = $('#cmb').find(":selected").text();
     selectedCustomer(selectedCustomerId);
@@ -43,10 +49,6 @@ function loadAllItemCodes() {
     }
 }
 
-//add to cart
-$("#addBtn").click(function(){
-    addItemToCart();
-});
 
 
 function selectedCustomer(CustomerId) {
@@ -165,4 +167,25 @@ function addItemToCart() {
         clearInputItems();
     }
 
+}
+
+/* Check Duplicate Item */
+function checkDuplicates(itemId) {
+    for (let i = 0; i < $("#OrderTB > tr").length; i++) {
+        if (itemId == $('#OrderTB').children().eq(i).children().eq(0).text()) {
+            alert(i);
+            return i;
+        }
+
+    }
+    return -1;
+}
+
+/* Clear Input Field on Selected Item Area */
+function clearInputItems() {
+    $("#idCmb").val("");
+    $("#itemName").val("");
+    $("#qtyOnHand").val("");
+    $("#price").val("");
+    $("#oQty").val("");
 }
