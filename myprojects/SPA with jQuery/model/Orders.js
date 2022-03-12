@@ -1,7 +1,7 @@
-function Orders(orderId,customerId,iteamId,date,discount,total) {
+function Orders(orderId,customerId,itemId,date,discount,total) {
     var __oId = orderId;
     var __cId = customerId;
-    var __iId = iteamId;
+    var __iId = itemId;
     var __date = date;
     var __discount = discount;
     var __total = total;
@@ -22,8 +22,8 @@ function Orders(orderId,customerId,iteamId,date,discount,total) {
         return __cId;
     }
 
-    this.setItemId = function(iteamId){
-        __iId = iteamId;
+    this.setItemId = function(itemId){
+        __iId = itemId;
     }
 
     this.getItemId = function(){

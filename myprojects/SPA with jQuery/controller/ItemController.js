@@ -3,10 +3,10 @@
 generateItemId();
 
 $("#btnItemSave").click(function () {
+    generateItemId();
     saveItem();
     loadAllItems();
     clearAll();
-    generateItemId();
     loadAllItemCodes();
 });
 

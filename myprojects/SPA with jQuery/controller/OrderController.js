@@ -1,10 +1,13 @@
+var selectedItemId;
+var selectedCustomerId;
+
 generateOrderId();
 setDate();
 disableEdit();
 
 $("#cmb").change(function(e){
-    let selectedCus = $('#cmb').find(":selected").text();
-    selectedCustomer(selectedCus);
+    selectedCustomerId = $('#cmb').find(":selected").text();
+    selectedCustomer(selectedCustomerId);
 
 });
 
@@ -41,14 +44,9 @@ function loadAllItemCodes() {
 }
 
 //add to cart
-/*
-$('#addBtn').click(function () {
-    checkOrderQtyAndAddToCart();
-    disableEdit();
+$("#addBtn").click(function(){
+    addItemToCart();
 });
-
-*/
-
 
 
 function selectedCustomer(CustomerId) {
@@ -106,5 +104,65 @@ function setDate() {
     let d = new Date();
     let dd = d.toISOString().split("T")[0].split("-");
     $("#iDate").val(dd[0]+"-"+dd[1]+"-"+dd[2]);
-    $("#hDate").text(dd[0]+"-"+dd[1]+"-"+dd[2]);
+    $("#iDate").text(dd[0]+"-"+dd[1]+"-"+dd[2]);
+}
+
+var fullTotal = 0;
+function addItemToCart() {
+    let id = selectedItemId;
+    let iName = $("#itemName").val();
+    let iQtyOnHand = $("#qtyOnHand").val();
+    let iPrice = $("#price").val();
+    let iOrderQTY = $("#oQty").val();
+
+    let total = 0;
+
+    // Check Qty Availability
+    if (iQtyOnHand >= iOrderQTY) {
+        iQtyOnHand = iQtyOnHand - iOrderQTY;
+    }else{
+        alert("Enter Valid QTY");
+        $("#oQty").val("");
+        return;
+    }
+    //updateing qty
+    for (let i = 0; i < itemDB.length; i++) {
+        if (id == itemDB[i].getItemCode()) {
+            itemDB[i].setItemQTY(iQtyOnHand);
+        }
+    }
+
+    let newQty = 0;
+    let newTotal= 0;
+
+    if (checkDuplicates(id)==-1) {
+        total = iOrderQTY * iPrice;
+        fullTotal = fullTotal + total;
+        let row =
+            `<tr><td>${id}</td><td>${iName}</td><td>${iPrice}</td><td>${iOrderQTY}<td>${total}</td></tr>`;
+        $("#OrderTB").append(row);
+        $("#lblFullTotal").text(fullTotal+" LKR");
+        clearInputItems();
+
+    }else{
+
+        let rowNo = checkDuplicates(id);
+        newQty = iOrderQTY;
+        let oldQty = parseInt($($('#OrderTB>tr').eq(rowNo).children(":eq(3)")).text());
+        let oldTotal = parseInt($($('#OrderTB>tr').eq(rowNo).children(":eq(4)")).text());
+
+        fullTotal = fullTotal-oldTotal;
+        newQty = parseInt(oldQty) + parseInt(newQty) ;
+        newTotal = newQty * iPrice;
+        fullTotal = fullTotal + newTotal;
+
+        //Update row
+        $('#OrderTB tr').eq(rowNo).children(":eq(3)").text(newQty);
+        $('#OrderTB tr').eq(rowNo).children(":eq(4)").text(newTotal);
+
+        $("#lblFullTotal").text(fullTotal+" LKR");
+        alert("test");
+        clearInputItems();
+    }
+
 }
