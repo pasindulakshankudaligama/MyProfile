@@ -1,10 +1,10 @@
-function Orders(orderId,customerId,itemId,date,discount,total) {
+function Orders(orderId,customerId,date,discount,total,subTotal) {
     var __oId = orderId;
     var __cId = customerId;
-    var __iId = itemId;
     var __date = date;
     var __discount = discount;
     var __total = total;
+    var __subTotal = subTotal;
 
     this.setOrderId = function(orderId){
         __oId = orderId;
@@ -20,14 +20,6 @@ function Orders(orderId,customerId,itemId,date,discount,total) {
 
     this.getCustomerId = function(){
         return __cId;
-    }
-
-    this.setItemId = function(itemId){
-        __iId = itemId;
-    }
-
-    this.getItemId = function(){
-        return __iId;
     }
 
     this.setDate = function(date){
@@ -52,6 +44,14 @@ function Orders(orderId,customerId,itemId,date,discount,total) {
 
     this.getTotal = function(){
         return __total;
+    }
+
+    this.setSubTotal = function(subTotal){
+        __subTotal = subTotal;
+    }
+
+    this.getSubTotal = function(){
+        return __subTotal;
     }
 
 }
